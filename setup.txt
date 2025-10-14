@@ -1,0 +1,48 @@
+Portfolio Website
+
+Next.js Frontend
+ ├─ Pages: Home, About, Projects, Contact
+ ├─ Components: ProjectCard, CertificateCard, Hero, Navbar, Footer
+ └─ Admin: /admin/login, /admin/dashboard (forms for adding projects/certs)
+
+Supabase Backend (Free Tier)
+ ├─ Auth: Single-user login
+ ├─ Database: Tables for Projects & Certificates
+ └─ Storage: Images for projects/certificates
+
+Target
+-Web Dev
+-Networks
+
+Edit
+-Dynamic
+-auth with admin for editting/adding projects
+-posgresql free for database
+
+Layout
+-multipage navigation (Home, Projects, Certificates)
+-vertical navigation 
+     -Home (Intro, About, and Contact me)
+     -Projects (Image,Short description, Documentation, Git hub link)
+     -Certificates (per subject)
+-minimal
+
+Home
+-Hero/Intro
+-Download Resume
+
+Projects
+-code link (github)
+-Documentaion
+
+About
+-Short bio
+-Skills
+-Experience
+-Education
+
+Contact me
+-email
+
+Last
+-Metadata
