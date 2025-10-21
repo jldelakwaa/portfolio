@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import { MantineProvider, ColorSchemeScript } from '@mantine/core'
+import '@mantine/core/styles.css'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./ui/navbar";
+import Header from "./ui/header";
+import Footer from "./ui/footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,12 +27,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-mantine-color-scheme="light">
+      <head>
+        {/* Mantine's color scheme script ensures the right theme on first render */}
+        <ColorSchemeScript />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <main className="mt-20 ml-10">{children}</main>
+        <MantineProvider defaultColorScheme="light">
+          <Header />
+          <main className="mt-32">{children}</main>
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );

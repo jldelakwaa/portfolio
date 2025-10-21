@@ -1,0 +1,23 @@
+import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+
+export default function Info() {
+    const data = [
+        { type: "Email", description: "jldelakwaa@gmail.com", icon: IconAt },
+        { type: "Number", description: "+63 (992) 255 47 09", icon: IconPhone },
+        { type: "Location", description: "Gen. Mariano Alvarez, Cavite, Philippines", icon: IconMapPin },
+    ];
+    return (
+        <div>
+            {data.map((item, index) => (
+                <div key={index} className="flex items-center mb-4">
+                    <item.icon className="text-2xl mr-4 text-blue-500" />
+                    <div>   
+                        <p className="text-lg font-bold">{item.type}</p>
+                        <p className="text-gray-600">{item.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+
+}
