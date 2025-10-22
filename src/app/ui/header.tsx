@@ -23,7 +23,6 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "Who?", href: "/about" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -43,35 +42,54 @@ export default function Header() {
           <span className="text-blue-600 font-extrabold">jl</span>_delacruz
         </Link>
 
-        {/* Desktop Nav */}
-        <Group gap="lg" visibleFrom="sm">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-            const isContact = item.name === "Contact";
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`mr-3 relative font-semibold font-mono text-gray-800 hover:text-blue-500 transition-colors
+        <div className="flex items-center">
+          {/* Desktop Nav */}
+          <Group gap="lg" visibleFrom="sm">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`mr-3 relative font-semibold font-mono text-gray-800 hover:text-blue-500 transition-colors
                   ${isActive ? "text-blue-600 after:w-full" : "after:w-0"}
-                  ${isContact ? "text-gray-600 bg-lime-200 pl-3 pr-3 rounded-lg" : "text-gray-800"} 
                   after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-blue-500 after:transition-all
                 `}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
-        </Group>
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </Group>
 
-        {/* Mobile Burger */}
-        <Burger
-          opened={opened}
-          onClick={() => setOpened((o) => !o)}
-          size="sm"
-          hiddenFrom="sm"
-          aria-label="Toggle navigation"
-        />
+          {/* Mobile Burger */}
+          <div className="mr-4">
+            <Burger
+            opened={opened}
+            onClick={() => setOpened((o) => !o)}
+            size="sm"
+            hiddenFrom="sm"
+            aria-label="Toggle navigation"
+          />
+          </div>
+
+          <Link
+            href="/contact"
+            className="hidden bg-lime-200 rounded-xl sm:flex items-center justify-center font-semibold font-mono text-gray-800 hover:text-blue-500 transition-colors"
+            aria-label="Contact"
+          >
+            {/* Show icon only on small-medium screens */}
+            <span className="sm:block md:hidden px-3 py-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </span>
+            {/* Show text on larger screens */}
+            <span className="hidden md:block px-4 py-1">
+              Contact
+            </span>
+          </Link>
+        </div>
       </Container>
 
       {/* Mobile Nav Drawer */}
@@ -99,6 +117,13 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="block px-4 py-3 font-medium text-gray-800 hover:bg-blue-100 transition"
+              onClick={() => setOpened(false)}
+            >
+              Contact
+            </Link>
           </Paper>
         )}
       </Transition>
