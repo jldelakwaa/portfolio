@@ -13,13 +13,13 @@ export default function Contact() {
   return (
     <div className="bg-cyan-100 py-8 px-8 min-h-[calc(100vh-8rem)] mt-30">
       <HideFooter />
-      <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto items-center justify-center h-full">
+      <div className="flex flex-col lg:flex-row gap-8 max-w-4xl mx-auto items-center justify-center h-full">
         <div className="lg:w-1/2">
           <Title>
             Contact <span className="text-blue-500">Me</span>
           </Title>
           <Text mt="sm" mb={30}>
-            Happy to work with you!
+            Pleased to work with you!
           </Text>
           <Info />
           <div className="flex gap-4 mt-6 ml-5">
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="w-1/3">
+        <div className="w-full lg:w-1/2 ">
           <Form />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { IconAt, IconMapPin, IconPhone } from '@tabler/icons-react';
 
 export default function Info() {
     const data = [
