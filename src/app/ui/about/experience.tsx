@@ -118,8 +118,8 @@ export default function Experience() {
                                     onClick={() => setSelectedIndex(index)}
                                     className={`cursor-pointer transition-all duration-200 text-left md:text-right md:pr-4 p-3 rounded-lg select-none
                                         ${selectedIndex === index 
-                                            ? 'bg-blue-50 dark:bg-blue-900/20 scale-105' 
-                                            : 'hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                                            ? 'bg-lime-200 dark:bg-blue-900/20 scale-105' 
+                                            : 'hover:bg-blue-100 dark:hover:bg-gray-800/50'
                                         }`}
                                 >
                                     <Group gap="xs" className="md:justify-end">

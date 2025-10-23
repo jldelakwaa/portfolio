@@ -56,26 +56,27 @@ export default function Education() {
     <div className="px-4 py-8 max-w-2xl mx-auto min-w-4xl text-center">
       <Title order={2} mb="md">🎓Education</Title>
       <div>
+        <style jsx global>{`
+          .mantine-Carousel-indicator {
+            width: 12px;
+            height: 6px;
+            transition: width 250ms ease;
+            background-color: #94a3b8;
+          }
+
+          .mantine-Carousel-indicator[data-active] {
+            width: 40px;
+          }
+
+          .mantine-Carousel-indicators {
+            bottom: -24px;
+          }
+        `}</style>
         <Carousel
         slideSize="90%"
         slideGap={8}
         withControls={false}
         withIndicators
-        styles={{
-          indicator: {
-            width: 12,
-            height: 6,
-            transition: 'width 250ms ease',
-            backgroundColor: '#94a3b8',
-            '&[data-active]': {
-              width: 40,
-              backgroundColor: '#3b82f6',
-            },
-          },
-          indicators: {
-            bottom: -24,
-          },
-        }}
       >
         {educationData.map((edu, index) => (
           <Carousel.Slide key={index}>
