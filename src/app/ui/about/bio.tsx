@@ -2,7 +2,6 @@
 import { Card, Text } from "@mantine/core";
 import Image from 'next/image';
 import BioImage from '@/app/images/bio.jpg';
-import Resume from "./resume";
 
 export default function Bio() {
     return (
@@ -62,8 +61,6 @@ export default function Bio() {
                                 on innovative projects and connect with fellow developers.
                             </Text>
                         </div>
-
-                        <Resume />
                     </div>
 
                     {/* Right side - Image */}
