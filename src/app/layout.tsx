@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MantineProvider, ColorSchemeScript } from '@mantine/core'
 import '@mantine/core/styles.css'
+import '@mantine/carousel/styles.css'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./ui/header";

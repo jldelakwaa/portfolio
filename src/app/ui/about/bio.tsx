@@ -25,33 +25,39 @@ export default function Bio() {
                         <div className="mt-6 space-y-3">
                             <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
-                                    📍 <span className="font-medium">Location:</span> Remote | Cavite, Philippines
+                                    📍 <span className="font-bold">Location:</span> Remote | Cavite, Philippines
                                 </Text>
                             </div>
                             
                             <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
-                                    🎯 <span className="font-medium">Focus:</span> Full-stack development & Networks
+                                    🎓 <span className="font-bold">Education:</span> Bachelor's Degree in Computer Engineering
                                 </Text>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
-                                    🚀 <span className="font-medium">Currently:</span> Jr. Developer (Laravel/React)
+                                    🎯 <span className="font-bold">Focus:</span> Full-stack development & Networks
                                 </Text>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
-                                    🌐 <span className="font-medium">Language:</span> Filipino (Native), English (Advance), & Japanese (Learning)
+                                    🚀 <span className="font-bold">Currently:</span> Jr. Developer (Laravel/React)
                                 </Text>
                             </div>
 
                             <div className="flex items-center gap-2">
+                                <Text size="sm" className="text-gray-700 dark:text-gray-300">
+                                    🌐 <span className="font-bold">Language:</span> Filipino (Native), English (Advance), & Japanese (Learning)
+                                </Text>
+                            </div>
+
+                            {/* <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
                                     📅 <span className="font-medium">Availability:</span> Open to opportunities!
                                 </Text>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="mt-8 mb-8">

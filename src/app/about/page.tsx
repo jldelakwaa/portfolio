@@ -2,6 +2,8 @@
 
 import { Text, Title } from "@mantine/core";
 import Bio from "../ui/about/bio";
+import Education from "../ui/about/education";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -15,6 +17,7 @@ export default function About() {
         </Text>
 
         <Bio />
+        <Education />
       </div>
     </>
   );
