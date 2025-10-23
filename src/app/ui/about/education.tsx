@@ -10,7 +10,7 @@ import FvresImage from '@/app/images/school/fvres.png';
 const educationData = [
 {
     level: 'College',
-    school: 'Technological University of the Philippines',
+    school: 'Technological University of the Philippines, Cavite',
     year: '2020 - 2024',
     icon: IconCertificate,
     description: 'BET - Computer Engineering Technology',
@@ -53,14 +53,29 @@ const educationData = [
 
 export default function Education() {
   return (
-    <div className="px-4 py-8 max-w-2xl mx-auto text-center">
-      <Title order={2} mb="md">Education</Title>
+    <div className="px-4 py-8 max-w-2xl mx-auto min-w-4xl text-center">
+      <Title order={2} mb="md">🎓Education</Title>
       <div>
         <Carousel
-        slideSize="100%"
-        slideGap={4}
-        controlsOffset="sm"
-        controlSize={40}
+        slideSize="90%"
+        slideGap={8}
+        withControls={false}
+        withIndicators
+        styles={{
+          indicator: {
+            width: 12,
+            height: 6,
+            transition: 'width 250ms ease',
+            backgroundColor: '#94a3b8',
+            '&[data-active]': {
+              width: 40,
+              backgroundColor: '#3b82f6',
+            },
+          },
+          indicators: {
+            bottom: -24,
+          },
+        }}
       >
         {educationData.map((edu, index) => (
           <Carousel.Slide key={index}>
