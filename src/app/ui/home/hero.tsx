@@ -6,9 +6,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Hero Section"
-      className="flex items-start justify-center min-h-screen px-4 md:pl-28 py-10 bg-cyan-50 mt-50"
     >
-      <div className="w-3/5">
         <div className="flex items-center mt-16 mb-6">
           <span className="block w-12 h-0.5 bg-indigo-600 mr-3"></span>
           <h3 className="text-xl font-bold text-indigo-600">John Lester</h3>
@@ -26,10 +24,6 @@ export default function Hero() {
           <PrimaryButton text="My Works" href="/projects" />
           <SecondaryButton text="Contact Me" href="/contact" />
         </div>
-      </div>
-      <div className="w-2/5 flex justify-center items-center">
-        <Avatar />
-      </div>
     </section>
   );
 }

@@ -15,13 +15,13 @@ export default function Footer() {
                 </p>
 
                 <Group gap={'lg'} justify="flex-end" wrap="nowrap">
-                    <ActionIcon size="lg" color="lime" variant="subtle" component={Link} href="/contact">
+                    <ActionIcon size="lg" color="white" bg={'lime.3'} variant="subtle" component={Link} href="/contact">
                         <IconMail size={20} stroke={1.5} />
                     </ActionIcon>
-                    <ActionIcon size="lg" color="Blue" variant="subtle" component="a" href='https://www.facebook.com/jldelakwaah/' target='_blank'>
+                    <ActionIcon size="lg" color="white" bg={'blue'} variant="subtle" component="a" href='https://www.facebook.com/jldelakwaah/' target='_blank'>
                         <IconBrandFacebook size={20} stroke={1.5}/>
                     </ActionIcon>
-                    <ActionIcon size="lg" color="Black" variant="subtle " component="a" href='https://github.com/jldelakwaa' target='_blank'>
+                    <ActionIcon size="lg" color="white" bg={'gray'} variant="subtle" component="a" href='https://github.com/jldelakwaa' target='_blank'>
                         <IconBrandGithub size={20} stroke={1.5} />
                     </ActionIcon>
                 </Group>

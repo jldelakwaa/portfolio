@@ -4,7 +4,7 @@ export default function Info() {
     const data = [
         { type: "Email", description: "jldelakwaa@gmail.com", icon: IconAt },
         { type: "Number", description: "+63 (992) 255 47 09", icon: IconPhone },
-        { type: "Location", description: "Gen. Mariano Alvarez, Cavite, Philippines", icon: IconMapPin },
+        { type: "Location", description: "Cavite, Philippines", icon: IconMapPin },
     ];
     return (
         <div>

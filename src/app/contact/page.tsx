@@ -23,10 +23,10 @@ export default function Contact() {
           </Text>
           <Info />
           <div className="flex gap-4 mt-6 ml-5">
-            <ActionIcon size="lg" color="Blue" variant="subtle" component="a" href='https://www.facebook.com/jldelakwaah/' target='_blank'>
+            <ActionIcon size="lg" color="white" bg={'blue'} variant="subtle" component="a" href='https://www.facebook.com/jldelakwaah/' target='_blank'>
               <IconBrandFacebook size={20} stroke={1.5} />
             </ActionIcon>
-            <ActionIcon size="lg" color="Black" variant="subtle" component="a" href='https://github.com/jldelakwaa' target='_blank'>
+            <ActionIcon size="lg" color="white" bg={'gray'} variant="subtle" component="a" href='https://github.com/jldelakwaa' target='_blank'>
               <IconBrandGithub size={20} stroke={1.5} />
             </ActionIcon>
           </div>
