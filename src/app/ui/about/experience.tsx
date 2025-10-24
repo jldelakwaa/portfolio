@@ -10,7 +10,7 @@ const experienceData = [
         position: 'Jr. Software Engineer',
         company: 'Coredev Inc.',
         location: 'Cebu based | Imus, Cavite, Philippines',
-        period: '2025 - 2026',
+        period: '2025 - Present',
         startDate: '2025',
         type: 'Full-time | Remote Hybrid',
         description: 'Develop and maintain software applications, collaborating with cross-functional teams to define, design, and ship new features. Troubleshoot and debug applications, ensuring optimal performance and user experience.',
@@ -122,9 +122,10 @@ export default function Experience() {
                                             : 'hover:bg-blue-100 dark:hover:bg-gray-800/50'
                                         }`}
                                 >
-                                    <Group gap="xs" className="md:justify-end">
+                                    <Group>
+                                        <div className="flex items-center gap-2 md:justify-end whitespace-nowrap">
                                         {selectedIndex === index && (
-                                            <IconCalendar size={16} className="text-blue-500" />
+                                            <IconCalendar size={16} className="text-blue-500 flex-shrink-0" />
                                         )}
                                         <Text 
                                             size="sm" 
@@ -133,7 +134,7 @@ export default function Experience() {
                                         >
                                             {exp.period}
                                         </Text>
-                                        
+                                    </div>
                                     </Group>
                                 </div>
                             ))}

@@ -5,6 +5,7 @@ import Bio from "../ui/about/bio";
 import Education from "../ui/about/education";
 import Image from "next/image";
 import Experience from "../ui/about/experience";
+import Skills from "../ui/about/skills";
 
 export default function About() {
   return (
@@ -18,8 +19,9 @@ export default function About() {
         </Text>
 
         <Bio />
-        <Education />
+        <Skills />
         <Experience />
+        <Education />
       </div>
     </>
   );
