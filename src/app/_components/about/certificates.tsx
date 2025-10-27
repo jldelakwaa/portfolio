@@ -17,11 +17,11 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
             padding="lg" 
             radius="md" 
             withBorder 
-            className="h-full min-h-[380px] max-w-[380px] mx-auto flex flex-col transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+            className="h-full min-h-[300px] max-w-[380px] mx-auto flex flex-col transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
             onClick={onClick}
         >
             {/* Certificate Preview - Fixed Height */}
-            <Card.Section className="relative h-48 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
+            <Card.Section className="relative h-36 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
                     <IconCertificate size={64} className="text-blue-400 dark:text-blue-600" />
                     {certificate.pdfUrl && (
@@ -182,8 +182,8 @@ export default function Certificates() {
                         {selectedCertificate.pdfUrl && (
                             <div className="mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
                                 <iframe
-                                    src={selectedCertificate.pdfUrl}
-                                    className="w-full h-96"
+                                    src={`${selectedCertificate.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                                    className="w-full h-88"
                                     title={selectedCertificate.title}
                                 />
                             </div>

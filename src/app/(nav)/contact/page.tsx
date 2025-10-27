@@ -1,10 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import Navbar from "../_components/header";
-import Info from "../_components/contact/Info";
-import Form from "../_components/contact/form";
-import HideFooter from "../_components/hide-footer";
+import Navbar from "../../_components/header";
+import Info from "../../_components/contact/Info";
+import Form from "../../_components/contact/form";
+import HideFooter from "../../_components/hide-footer";
 import { Text, Title } from "@mantine/core";
 import { ActionIcon } from "@mantine/core";
 import { IconMail, IconBrandFacebook, IconBrandGithub } from '@tabler/icons-react';
