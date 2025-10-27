@@ -1,10 +1,18 @@
-import { Title } from "@mantine/core";
-import TupImage from '@/app/images/school/tup.png';
+import { Title, Container, Grid, Card, Badge, Text } from '@mantine/core';
 
-const SkillSets = [
+// TypeScript interface for better type safety
+interface Skill {
+    type: string;
+    icon: string;
+    color: string;
+    Skills: string[];
+}
+
+const SkillSets: Skill[] = [
     {
-        id: 1,
         type: 'Frontend',
+        icon: '💻',
+        color: 'blue',
         Skills:
             [
                 'JavaScript',
@@ -18,8 +26,9 @@ const SkillSets = [
             ],
     },
     {
-        id: 2,
         type: 'Backend',
+        icon: '⚙️',
+        color: 'green',
         Skills:
             [
                 'Node.js',
@@ -29,8 +38,9 @@ const SkillSets = [
             ],
     },
     {
-        id: 3,
         type: 'Database',
+        icon: '🗄️',
+        color: 'orange',
         Skills:
             [
                 'MySQL',
@@ -38,8 +48,9 @@ const SkillSets = [
             ],
     },
     {
-        id: 4,
-        type: 'Full-Stack Frameworks',
+        type: 'Frameworks',
+        icon: '🚀',
+        color: 'violet',
         Skills:
             [
                 'Laravel',
@@ -47,23 +58,44 @@ const SkillSets = [
             ],
     },
     {
-        id: 5,
-        type: 'Version Control & Tools',
+        type: 'Environment',
+        icon: '🌍',
+        color: 'cyan',
         Skills:
             [
                 'Docker',
                 'WSL2',
                 'XAMPP',
-                'Git',
-                'GitHub',
-                'GitLab',
-                'VS Code',
-                'Postman',
+                'Windows 11',
             ],
     },
     {
-        id: 6,
+        type: 'Version Control',
+        icon: '🔀',
+        color: 'indigo',
+        Skills:
+            [
+                'Git',
+                'GitHub',
+                'GitLab',
+            ],
+    },
+    {
+        type: 'Dev Tools',
+        icon: '🛠️',
+        color: 'gray',
+        Skills:
+            [
+                'VS Code',
+                'Postman',
+                'Figma',
+                'MySQL Workbench',
+            ],
+    },
+    {
         type: 'Networks & System',
+        icon: '🌐',
+        color: 'teal',
         Skills:
             [
                 'Cisco IOS',
@@ -78,26 +110,26 @@ const SkillSets = [
                 'Ethernet',
                 'Wireless Network',
                 'IP Subnetting',
-                'iMaster Network Cloud Engine',
+                'iMaster NCE',
             ],
     },
     {
-        id: 7,
-        type: 'Other',
+        type: 'Productivity',
+        icon: '📊',
+        color: 'grape',
         Skills:
             [
-                'Word',
-                'Excel',
-                'PowerPoint',
-                'Google Spreadsheet',
+                'Microsoft Office',
+                'Google Workspace',
                 'Appscript',
                 'Autocad',
                 'MIT App Inventor',
             ],
     },
     {
-        id: 8,
         type: 'Languages',
+        icon: '🗣️',
+        color: 'pink',
         Skills:
             [
                 'Filipino (Native)',
@@ -105,13 +137,90 @@ const SkillSets = [
                 'Japanese (Learning)',
             ],
     },
-
 ];
+
+// SkillCard component with hover effects and icons
+function SkillCard({ skillType }: { skillType: string }) {
+    const skill = SkillSets.find(s => s.type === skillType);
+    
+    if (!skill) return null;
+
+    return (
+        <Card 
+            shadow="sm" 
+            padding="lg" 
+            radius="md" 
+            withBorder 
+            className="h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-default"
+        >
+            <Card.Section withBorder inheritPadding py="xs">
+                <div className="flex items-center justify-center gap-2">
+                    <Text size="xl">{skill.icon}</Text>
+                    <Title order={4} className="text-center">{skill.type}</Title>
+                </div>
+            </Card.Section>
+            <Card.Section inheritPadding py="md">
+                <div className="flex flex-wrap gap-2 justify-center">
+                    {skill.Skills.map((skillName, index) => (
+                        <Badge 
+                            key={index} 
+                            variant="gradient" 
+                            size="md"
+                            className="transition-all duration-200 hover:scale-110"
+                        >
+                            {skillName}
+                        </Badge>
+                    ))}
+                </div>
+            </Card.Section>
+        </Card>
+    );
+}
+
 export default function Skills() {
     return (
-        <div className="px-4 py-8 max-w-5xl mx-auto">
-            <Title order={2} mb="xl" className="text-center">👨‍💻 Skills</Title>
+        <div className="w-full mb-20">
+            <Title order={1} mb="xl" className="text-center">👨‍💻 Skills & Technologies</Title>
+            <Container my="xl" size="lg">
+                <Grid gutter="md">
+                    {/* Row 1 - Frontend & Backend */}
+                    <Grid.Col span={{ base: 12, xs: 8 }}>
+                        <SkillCard skillType='Frontend' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                        <SkillCard skillType='Backend' />
+                    </Grid.Col>
 
+                    {/* Row 2 - Frameworks, Database, Dev Tools */}
+                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                        <SkillCard skillType='Frameworks' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                        <SkillCard skillType='Database' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                        <SkillCard skillType='Version Control' />
+                    </Grid.Col>
+
+                    <Grid.Col span={{ base: 12, xs: 6 }}>
+                        <SkillCard skillType='Dev Tools' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 6 }}>
+                        <SkillCard skillType='Environment' />
+                    </Grid.Col>
+                    
+                    <Grid.Col span={{ base: 12, xs: 12 }}>
+                        <SkillCard skillType='Networks & System' />
+                    </Grid.Col>
+
+                    <Grid.Col span={{ base: 12, xs: 8 }}>
+                        <SkillCard skillType='Productivity' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                        <SkillCard skillType='Languages' />
+                    </Grid.Col>
+                </Grid>
+            </Container>
         </div>
     );
 }
