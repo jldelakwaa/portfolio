@@ -27,19 +27,19 @@ export default function Experience() {
                                     onClick={() => setSelectedIndex(index)}
                                     className={`cursor-pointer transition-all duration-200 text-left md:text-right md:pr-4 p-3 rounded-lg select-none
                                         ${selectedIndex === index 
-                                            ? 'bg-lime-200 dark:bg-blue-900/20 scale-105' 
-                                            : 'hover:bg-blue-100 dark:hover:bg-gray-800/50'
+                                            ? 'bg-blue-500 ' 
+                                            : 'hover:bg-blue-100'
                                         }`}
                                 >
                                     <Group>
                                         <div className="flex items-center gap-2 md:justify-end whitespace-nowrap">
                                         {selectedIndex === index && (
-                                            <IconCalendar size={16} className="text-blue-500 flex-shrink-0" />
+                                            <IconCalendar size={16} className="text-white flex-shrink-0" />
                                         )}
                                         <Text 
                                             size="sm" 
                                             fw={selectedIndex === index ? 700 : 500} 
-                                            c={selectedIndex === index ? "blue" : "dimmed"}
+                                            c={selectedIndex === index ? "white" : "dimmed"}
                                         >
                                             {exp.period}
                                         </Text>
