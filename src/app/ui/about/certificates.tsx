@@ -5,67 +5,7 @@ import { Carousel } from '@mantine/carousel';
 import { IconExternalLink, IconCalendar, IconCertificate, IconAward } from '@tabler/icons-react';
 import { useState, useRef, useEffect } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-
-// TypeScript interface for certificate data
-interface Certificate {
-    id: number;
-    title: string;
-    issuer: string;
-    date: string;
-    category: string;
-    credentialId?: string;
-    credentialUrl?: string;
-    imageUrl?: string; // Path to certificate image
-    skills?: string[];
-    description?: string;
-}
-
-// Sample certificate data - Replace with your actual certificates
-const certificateData: Certificate[] = [
-    {
-        id: 1,
-        title: 'Full Stack Web Development',
-        issuer: 'Coursera',
-        date: 'January 2024',
-        category: 'Web Development',
-        credentialId: 'ABC123XYZ',
-        credentialUrl: 'https://coursera.org/verify/ABC123XYZ',
-        imageUrl: '/certificates/fullstack.jpg', // Add your certificate images to public/certificates/
-        skills: ['React', 'Node.js', 'MongoDB'],
-        description: 'Comprehensive full-stack development course covering modern web technologies'
-    },
-    {
-        id: 2,
-        title: 'Network Security Fundamentals',
-        issuer: 'Cisco',
-        date: 'March 2023',
-        category: 'Networks',
-        credentialId: 'CISCO-NET-2023',
-        credentialUrl: 'https://cisco.com/verify',
-        skills: ['Network Security', 'Firewall', 'VPN'],
-    },
-    {
-        id: 3,
-        title: 'Network Security Fundamentals',
-        issuer: 'Cisco',
-        date: 'March 2023',
-        category: 'Networks',
-        credentialId: 'CISCO-NET-2023',
-        credentialUrl: 'https://cisco.com/verify',
-        skills: ['Network Security', 'Firewall', 'VPN'],
-    },
-    {
-        id: 4,
-        title: 'Network Security Fundamentals',
-        issuer: 'Cisco',
-        date: 'March 2023',
-        category: 'Networks',
-        credentialId: 'CISCO-NET-2023',
-        credentialUrl: 'https://cisco.com/verify',
-        skills: ['Network Security', 'Firewall', 'VPN'],
-    },
-    // Add more certificates here
-];
+import { certificateData, Certificate } from '@/app/data/certificateData';
 
 // Group certificates by category
 const categories = ['All', ...Array.from(new Set(certificateData.map(cert => cert.category)))];
@@ -80,19 +20,16 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
             className="h-full min-h-[380px] max-w-[380px] mx-auto flex flex-col transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
             onClick={onClick}
         >
-            {/* Certificate Image Preview - Fixed Height */}
+            {/* Certificate Preview - Fixed Height */}
             <Card.Section className="relative h-48 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <IconCertificate size={64} className="text-blue-300 dark:text-blue-700" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                    <IconCertificate size={64} className="text-blue-400 dark:text-blue-600" />
+                    {certificate.pdfUrl && (
+                        <Badge variant="filled" color="blue" size="sm">
+                            PDF Certificate
+                        </Badge>
+                    )}
                 </div>
-                {/* Uncomment when you add actual images */}
-                {certificate.imageUrl && (
-                    <Image 
-                        src={certificate.imageUrl} 
-                        alt={certificate.title} 
-                        className="object-cover w-full h-full"
-                    />
-                )}
             </Card.Section>
 
             {/* Content area with flex-grow to fill remaining space */}
@@ -110,13 +47,6 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
                     <IconAward size={16} className="text-gray-500 flex-shrink-0" />
                     <Text size="sm" c="dimmed" className="line-clamp-1">
                         {certificate.issuer}
-                    </Text>
-                </Group>
-
-                <Group gap="xs" className="mb-3">
-                    <IconCalendar size={16} className="text-gray-500 flex-shrink-0" />
-                    <Text size="xs" c="dimmed">
-                        {certificate.date}
                     </Text>
                 </Group>
 
@@ -172,10 +102,6 @@ export default function Certificates() {
             <Title order={1} mb="md" className="text-center">
                 🏆 Certificates & Achievements
             </Title>
-            
-            <Text size="md" c="dimmed" className="text-center mb-8">
-                Professional certifications and achievements that validate my expertise
-            </Text>
 
             {/* Category Tabs */}
             <Tabs value={activeTab} onChange={(value) => setActiveTab(value || 'All')} className="mb-6">
@@ -252,14 +178,14 @@ export default function Certificates() {
             >
                 {selectedCertificate && (
                     <div>
-                        {/* Certificate Image */}
-                        {selectedCertificate.imageUrl && (
-                            <div className="mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20">
-                                <div className="h-64 flex items-center justify-center">
-                                    <IconCertificate size={100} className="text-blue-300 dark:text-blue-700" />
-                                </div>
-                                {/* Uncomment when you add actual images */}
-                                {/* <Image src={selectedCertificate.imageUrl} alt={selectedCertificate.title} /> */}
+                        {/* Certificate PDF Preview */}
+                        {selectedCertificate.pdfUrl && (
+                            <div className="mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                                <iframe
+                                    src={selectedCertificate.pdfUrl}
+                                    className="w-full h-96"
+                                    title={selectedCertificate.title}
+                                />
                             </div>
                         )}
 
@@ -314,19 +240,32 @@ export default function Certificates() {
                             </div>
                         )}
 
-                        {selectedCertificate.credentialUrl && (
-                            <Button
-                                component="a"
-                                href={selectedCertificate.credentialUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                rightSection={<IconExternalLink size={16} />}
-                                fullWidth
-                                mt="md"
-                            >
-                                Verify Certificate
-                            </Button>
-                        )}
+                        <Group grow mt="md">
+                            {selectedCertificate.pdfUrl && (
+                                <Button
+                                    component="a"
+                                    href={selectedCertificate.pdfUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    rightSection={<IconExternalLink size={16} />}
+                                    variant="filled"
+                                >
+                                    View PDF
+                                </Button>
+                            )}
+                            {selectedCertificate.credentialUrl && (
+                                <Button
+                                    component="a"
+                                    href={selectedCertificate.credentialUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    rightSection={<IconExternalLink size={16} />}
+                                    variant="light"
+                                >
+                                    Verify Online
+                                </Button>
+                            )}
+                        </Group>
                     </div>
                 )}
             </Modal>
