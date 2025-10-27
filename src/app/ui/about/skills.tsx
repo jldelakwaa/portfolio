@@ -123,6 +123,7 @@ const SkillSets: Skill[] = [
                 'Google Workspace',
                 'Appscript',
                 'Autocad',
+                'Canva',
                 'MIT App Inventor',
             ],
     },
@@ -159,7 +160,7 @@ function SkillCard({ skillType }: { skillType: string }) {
                     <Title order={4} className="text-center">{skill.type}</Title>
                 </div>
             </Card.Section>
-            <Card.Section inheritPadding py="md">
+            <Card.Section inheritPadding py="sm">
                 <div className="flex flex-wrap gap-2 justify-center">
                     {skill.Skills.map((skillName, index) => (
                         <Badge 
@@ -179,7 +180,7 @@ function SkillCard({ skillType }: { skillType: string }) {
 
 export default function Skills() {
     return (
-        <div className="w-full mb-20">
+        <div className="w-full">
             <Title order={1} mb="xl" className="text-center">👨‍💻 Skills & Technologies</Title>
             <Container my="xl" size="lg">
                 <Grid gutter="md">
@@ -213,11 +214,11 @@ export default function Skills() {
                         <SkillCard skillType='Networks & System' />
                     </Grid.Col>
 
-                    <Grid.Col span={{ base: 12, xs: 8 }}>
-                        <SkillCard skillType='Productivity' />
-                    </Grid.Col>
                     <Grid.Col span={{ base: 12, xs: 4 }}>
                         <SkillCard skillType='Languages' />
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 8 }}>
+                        <SkillCard skillType='Productivity' />
                     </Grid.Col>
                 </Grid>
             </Container>

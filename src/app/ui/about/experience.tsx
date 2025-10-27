@@ -102,7 +102,7 @@ export default function Experience() {
 
     return (
         <div className="px-4 py-8 max-w-5xl mx-auto">
-            <Title order={2} mb="xl" className="text-center">💼 Work Experience</Title>
+            <Title order={1} mb="xl" className="text-center">💼 Work Experience</Title>
 
             <div className="relative">
                 {/* Timeline line */}
@@ -206,7 +206,7 @@ export default function Experience() {
                                 <Text size="sm" mb="xs" fw={600}>Technologies:</Text>
                                 <Group gap="xs">
                                     {selectedExp.technologies.map((tech, i) => (
-                                        <Badge key={i} size="sm" variant="dot">
+                                        <Badge key={i} size="sm" variant="filled" color="blue.5">
                                             {tech}
                                         </Badge>
                                     ))}
@@ -220,7 +220,7 @@ export default function Experience() {
                                 <Text size="sm" mb="xs" fw={600}>Skills:</Text>
                                 <Group gap="xs">
                                     {selectedExp.Skills.map((skill, i) => (
-                                        <Badge key={i} size="sm" variant="dot">
+                                        <Badge key={i} size="sm" variant="filled" color="green.5">
                                             {skill}
                                         </Badge>
                                     ))}

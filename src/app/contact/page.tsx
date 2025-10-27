@@ -18,8 +18,8 @@ export default function Contact() {
           <Title>
             Contact <span className="text-blue-500">Me</span>
           </Title>
-          <Text mt="sm" mb={30}>
-            Pleased to work with you!
+          <Text className="text-gray-500 dark:text-gray-500 italic" mb={20}>
+            Pleased to meet you!
           </Text>
           <Info />
           <div className="flex gap-4 mt-6 ml-5">
