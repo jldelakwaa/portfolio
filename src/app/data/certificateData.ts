@@ -49,4 +49,5 @@ export const certificateData: Certificate[] = [
         skills: ['React', 'Next.js', 'App Router'],
         description: 'Explored the foundational knowledge and Next.js App Router, Dynamic Routing.'
     },
+    
 ];
