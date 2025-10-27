@@ -1,12 +1,12 @@
 'use client';
 
 import { Text, Title } from "@mantine/core";
-import Bio from "../ui/about/bio";
-import Education from "../ui/about/education";
+import Bio from "../_components/about/bio";
+import Education from "../_components/about/education";
 import Image from "next/image";
-import Experience from "../ui/about/experience";
-import Skills from "../ui/about/skills";
-import Certificates from "../ui/about/certificates";
+import Experience from "../_components/about/experience";
+import Skills from "../_components/about/skills";
+import Certificates from "../_components/about/certificates";
 
 export default function About() {
   return (

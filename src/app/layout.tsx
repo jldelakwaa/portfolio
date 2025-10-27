@@ -4,8 +4,8 @@ import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./ui/header";
-import Footer from "./ui/footer";
+import Header from "./_components/header";
+import Footer from "./_components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

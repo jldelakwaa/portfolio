@@ -1,7 +1,7 @@
 'use client';
 
-import Avatar from "../ui/home/avatar";
-import Hero from "../ui/home/hero";
+import Avatar from "../_components/home/avatar";
+import Hero from "../_components/home/hero";
 
 export default function Home() {
   return (
