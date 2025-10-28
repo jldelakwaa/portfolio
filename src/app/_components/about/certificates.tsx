@@ -79,7 +79,7 @@ export default function Certificates() {
     // Create autoplay ref with slow delay (3 seconds) - useMemo to ensure it recreates properly
     const autoplay = useRef(
         Autoplay({ 
-            delay: 2500, 
+            delay: 2000, 
             stopOnInteraction: false,
             stopOnMouseEnter: true,
             playOnInit: true
@@ -89,6 +89,12 @@ export default function Certificates() {
     const filteredCertificates = activeTab === 'All' 
         ? certificateData 
         : certificateData.filter(cert => cert.category === activeTab);
+
+    // Get count for each category
+    const getCategoryCount = (category: string) => {
+        if (category === 'All') return certificateData.length;
+        return certificateData.filter(cert => cert.category === category).length;
+    };
 
     // Reset autoplay when changing tabs
     useEffect(() => {
@@ -107,8 +113,12 @@ export default function Certificates() {
             <Tabs value={activeTab} onChange={(value) => setActiveTab(value || 'All')} className="mb-6">
                 <Tabs.List className="flex-wrap justify-center">
                     {categories.map((category) => (
-                        <Tabs.Tab key={category} value={category}>
-                            {category}
+                        <Tabs.Tab
+                            key={category}
+                            value={category}
+                            className="data-[active=true]:!bg-blue-500 data-[active=true]:!text-white !bg-white dark:!bg-gray-800 hover:!bg-blue-300 dark:hover:!bg-gray-700 rounded-md px-4 py-2 transition-colors duration-200 !m-1"
+                        >
+                            {category} ({getCategoryCount(category)})
                         </Tabs.Tab>
                     ))}
                 </Tabs.List>
@@ -216,15 +226,6 @@ export default function Certificates() {
                             <Text size="sm" className="mb-4">
                                 {selectedCertificate.description}
                             </Text>
-                        )}
-
-                        {selectedCertificate.credentialId && (
-                            <div className="mb-3">
-                                <Text size="sm" fw={500} className="mb-1">Credential ID:</Text>
-                                <Text size="sm" c="dimmed" className="font-mono">
-                                    {selectedCertificate.credentialId}
-                                </Text>
-                            </div>
                         )}
 
                         {selectedCertificate.skills && selectedCertificate.skills.length > 0 && (

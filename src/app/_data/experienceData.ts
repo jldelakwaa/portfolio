@@ -31,6 +31,7 @@ const experienceData: Experience[] = [
             'Completed a project application',
             'Handled 4 Legacy and 5 Modern Systems',
             'Successfully migrated one legacy system to modern framework',
+            'Handled security vulnerabilities and implemented best practices',
         ],
         technologies:
             [
@@ -74,6 +75,10 @@ const experienceData: Experience[] = [
         achievements: [
             'Regular Employee',
             'Candidate as Team Leader',
+            'Created Appscript Spreadsheet automation for report generation',
+            'Successfully handled network outages and minimized downtime',
+            'Improved network performance through proactive monitoring and maintenance',
+            'Created Autocad pole maps for network planning and optimization',
         ],
         technologies:
             [
