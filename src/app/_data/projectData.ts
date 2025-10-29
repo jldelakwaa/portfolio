@@ -1,26 +1,28 @@
+import PacketTracerImage from '@/../public/projects/packet-tracer.png';
+import { StaticImageData } from 'next/image';
+
 interface Project {
-    id: string;
-    image: string;
+    id: number;
+    image: string | StaticImageData;
     label: string;
     description: string;
     content: string;
+    link?: string;
+    preview?: string | StaticImageData;
+    type: 'activity' | 'project';
 }
 
 const Project_list: Project[] = [
   {
-    id: 'bender',
-    image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-    label: 'Bender Bending Rodríguez',
-    description: 'Fascinated with cooking, though has no sense of taste',
-    content: "Bender Bending Rodríguez, (born September 4, 2996), designated Bending Unit 22, and commonly known as Bender, is a bending unit created by a division of MomCorp in Tijuana, Mexico, and his serial number is 2716057. His mugshot id number is 01473. He is Fry's best friend.",
-  },
+    id: 1,
+    image: PacketTracerImage,
+    label: 'Packet Tracer',
+    description: 'Network Simulation Tool for Cisco Activities',
+    content: "Using Cisco Packet Tracer, I designed and simulated various network topologies to enhance my understanding of networking concepts. This tool allowed me to visualize network configurations, test connectivity, and troubleshoot issues in a virtual environment, which significantly improved my practical skills in network management and design. Most of activity for Network Fundamentals course were accomplished using this tool.",
+    link: 'https://drive.google.com/drive/folders/1kkJ3kldvazzystbtWYJBqybnxQXsY9TI?usp=drive_link',
+    preview: PacketTracerImage,
+    type: 'activity',
 
-  {
-    id: 'carol',
-    image: 'https://img.icons8.com/clouds/256/000000/futurama-mom.png',
-    label: 'Carol Miller',
-    description: 'One of the richest people on Earth',
-    content: "Carol Miller (born January 30, 2880), better known as Mom, is the evil chief executive officer and shareholder of 99.7% of Momcorp, one of the largest industrial conglomerates in the universe and the source of most of Earth's robots. She is also one of the main antagonists of the Futurama series.",
   },
 ];
 

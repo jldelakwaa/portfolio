@@ -21,14 +21,8 @@ export default function About() {
         </Title>
         
         <div className="max-w-5xl text-center space-y-2">
-          <Text size="xl" className="text-gray-700 dark:text-gray-300">
-            Welcome! 👋
-          </Text>
-          <Text size="lg" className="text-gray-600 dark:text-gray-400">
-            My name is <span className="font-bold text-blue-600 dark:text-blue-400">John Lester Dela Cruz</span>
-          </Text>
           <Text className="text-gray-500 dark:text-gray-500 italic">
-            Pleased to meet you!
+            My name is <span className="underline">John Lester Dela Cruz</span>, Nice to meet you!
           </Text>
         </div>
       </div>
