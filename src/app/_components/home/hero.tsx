@@ -1,5 +1,5 @@
-import PrimaryButton from "@/app/_components/common/primary-button";
-import SecondaryButton from "@/app/_components/common/secondary-button";
+import PrimaryButton from "@/app/_components/_common/primary-button";
+import SecondaryButton from "@/app/_components/_common/secondary-button";
 import Avatar from "./avatar";
 
 export default function Hero() {

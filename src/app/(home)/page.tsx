@@ -9,7 +9,7 @@ export default function Home() {
       <div className="w-full lg:w-3/5 order-2 lg:order-1 flex items-center justify-center">
         <Hero />
       </div>
-      <div className="w-full lg:w-2/5 flex justify-center items-center order-1 lg:order-2">
+      <div className="w-full lg:max-w-2/5 flex justify-center items-center order-1 lg:order-2">
         <Avatar />
       </div>
     </div>

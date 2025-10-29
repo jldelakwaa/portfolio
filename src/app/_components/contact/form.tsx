@@ -14,7 +14,7 @@ export default function Form() {
     const yourEmail = 'jldelakwaa@gmail.com';
     
     // Create Gmail compose link (opens Gmail in browser)
-    const subject = encodeURIComponent(`${name}' Message`);
+    const subject = encodeURIComponent(`${name}'s Message`);
     const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${subject}&body=${body}`;
     
