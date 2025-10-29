@@ -5,7 +5,7 @@ import { educationData } from '@/app/_data/educationData';
 
 export default function Education() {
   return (
-    <div className="px-4 py-8 max-w-2xl mx-auto min-w-4xl text-center mb-4">
+    <div className="px-4 py-8 max-w-5xl mx-auto text-center mb-4">
       <Title order={1} mb="md">🎓Education</Title>
       <div>
         <style jsx global>{`

@@ -104,7 +104,7 @@ export default function Certificates() {
     }, [activeTab]);
 
     return (
-        <div className="px-4 py-8 max-w-6xl mx-auto">
+        <div className="px-4 py-8 max-w-5xl mx-auto">
             <Title order={1} mb="md" className="text-center">
                 🏆 Certificates & Achievements
             </Title>

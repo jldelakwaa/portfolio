@@ -1,4 +1,4 @@
-import { Title, Container, Grid, Card, Badge, Text } from '@mantine/core';
+import { Title, Grid, Card, Badge, Text } from '@mantine/core';
 import SkillSets from '@/app/_data/skillsData';
 
 // SkillCard component with hover effects and icons
@@ -41,9 +41,9 @@ function SkillCard({ skillType }: { skillType: string }) {
 
 export default function Skills() {
     return (
-        <div className="w-full">
+        <div className="w-full max-w-5xl mx-auto px-4">
             <Title order={1} mb="xl" className="text-center">👨‍💻 Skills & Technologies</Title>
-            <Container my="xl" size="lg">
+            <div className="my-8">
                 <Grid gutter="md">
                     {/* Row 1 - Frontend & Backend */}
                     <Grid.Col span={{ base: 12, xs: 8 }}>
@@ -82,7 +82,7 @@ export default function Skills() {
                         <SkillCard skillType='Productivity' />
                     </Grid.Col>
                 </Grid>
-            </Container>
+            </div>
         </div>
     );
 }

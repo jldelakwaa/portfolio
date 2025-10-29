@@ -20,7 +20,7 @@ export default function About() {
           About <span className="text-blue-500">Me</span>
         </Title>
         
-        <div className="max-w-2xl text-center space-y-2">
+        <div className="max-w-5xl text-center space-y-2">
           <Text size="xl" className="text-gray-700 dark:text-gray-300">
             Welcome! 👋
           </Text>
