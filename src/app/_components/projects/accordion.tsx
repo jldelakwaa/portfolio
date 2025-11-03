@@ -1,6 +1,7 @@
-import { Group, Text, Accordion, Button, Grid, Title, Badge } from '@mantine/core';
+import { Group, Text, Accordion, Button, Grid, Title, Badge, ActionIcon } from '@mantine/core';
 import Image, { StaticImageData } from 'next/image';
 import { Project_list } from '@/app/_data/projectData';
+import { IconBrandGithub } from '@tabler/icons-react';
 
 interface AccordionLabelProps {
     label: string;
@@ -61,19 +62,26 @@ export default function MyProjects() {
                                     ))}
                                 </Group>
                             </div>
-                            {item.link && (
-                                <Button
-                                    variant="gradient"
-                                    component="a"
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    px={40}
-                                    className="mt-auto lg:self-start hover:scale-105 transition-transform"
-                                >
-                                    View {item.type === 'project' ? 'Projects' : 'Activities'}
-                                </Button>
-                            )}
+                            <div className="mt-auto mx-3 flex items-center gap-4">
+                                {item.link && (
+                                    <Button
+                                        variant="gradient"
+                                        component="a"
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        px={40}
+                                        className="mt-auto lg:self-start hover:scale-105 transition-transform"
+                                    >
+                                        View {item.type === 'project' ? 'Project' : 'Activities'}
+                                    </Button>
+                                )}
+                                {item.github && (
+                                    <ActionIcon size="lg" color="white" bg={'gray'} variant="transparent" component="a" href={item.github} target="_blank" rel="noopener noreferrer">
+                                        <IconBrandGithub size={20} stroke={1.5} />
+                                    </ActionIcon>
+                                )}
+                            </div>
                         </div>
                     </Grid.Col>
                     <Grid.Col span={{ base: 12, md: 4 }}>
