@@ -1,11 +1,14 @@
 'use client';
 
+import GradientBackground from "@/app/_components/_common/gradient-background";
 import MyProjects from "@/app/_components/projects/accordion";
 import { Text, Title } from "@mantine/core";
 
 export default function Projects() {
   return (
     <div>
+      <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
+            
       <div className="relative flex flex-col justify-center items-center py-10 px-4">
         {/* Content */}
         <Title
@@ -24,6 +27,6 @@ export default function Projects() {
         <MyProjects />
       </div>
 
-    </div >
+    </div>
   );
 }
