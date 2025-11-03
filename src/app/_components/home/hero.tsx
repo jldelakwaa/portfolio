@@ -6,7 +6,7 @@ export default function Hero() {
     <section
       aria-label="Hero Section"
     >
-        <div className="flex items-center mt-16 mb-6">
+        <div className="flex items-center mb-6">
           <span className="block w-12 h-0.5 bg-indigo-600 mr-3"></span>
           <h3 className="text-xl font-bold text-indigo-600">John Lester</h3>
         </div>

@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <MantineProvider defaultColorScheme="light">
           <Header />
-          <main className="mt-32">{children}</main>
+          <main className="mt-20">{children}</main>
           <Footer />
         </MantineProvider>
       </body>
