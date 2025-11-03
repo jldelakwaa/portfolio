@@ -4,6 +4,7 @@ import Avatar from "../_components/home/avatar";
 import Hero from "../_components/home/hero";
 import GradientBackground from "../_components/_common/gradient-background";
 import Quotes from "../_components/home/quotes";
+import BibleVerse from "../_components/about/bible-verse";
 
 export default function Home() {
   return (
