@@ -17,7 +17,7 @@ export default function Bio() {
                     {/* Left side - Text content */}
                     <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">
                         <Text size="lg" className="leading-relaxed">
-                            I'm a <span className="font-semibold text-blue-500">Software Developer</span> and{" "}
+                            I&apos;m a <span className="font-semibold text-blue-500">Software Developer</span> and{" "}
                             <span className="font-semibold text-blue-500">Network Operations Specialist</span>{" "}
                             passionate about building innovative solutions.
                         </Text>
@@ -31,7 +31,7 @@ export default function Bio() {
                             
                             <div className="flex items-center gap-2">
                                 <Text size="sm" className="text-gray-700 dark:text-gray-300">
-                                    🎓 <span className="font-bold">Education:</span> Bachelor's Degree in Computer Engineering
+                                    🎓 <span className="font-bold">Education:</span> Bachelor&apos;s Degree in Computer Engineering
                                 </Text>
                             </div>
 

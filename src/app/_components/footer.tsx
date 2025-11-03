@@ -1,5 +1,5 @@
 import { ActionIcon, Container, Group } from '@mantine/core';
-import { IconBrandFacebook, IconBrandGithub, IconBrandGmail, IconBrandInstagram, IconBrandTwitter, IconBrandYoutube, IconMail } from '@tabler/icons-react';
+import { IconBrandFacebook, IconBrandGithub, IconMail } from '@tabler/icons-react';
 import Link from 'next/dist/client/link';
 
 

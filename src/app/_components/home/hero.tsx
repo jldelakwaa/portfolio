@@ -1,6 +1,5 @@
 import PrimaryButton from "@/app/_components/_common/primary-button";
 import SecondaryButton from "@/app/_components/_common/secondary-button";
-import Avatar from "./avatar";
 
 export default function Hero() {
   return (
@@ -13,7 +12,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-6xl font-extrabold text-gray-900 mb-4">
-          Hi, I'm Lester.
+          Hi, I&apos;m Lester.
         </h1>
 
         <h2 className="text-2xl text-gray-700 mb-6">

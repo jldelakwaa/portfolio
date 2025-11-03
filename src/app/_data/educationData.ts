@@ -1,4 +1,5 @@
-import { IconSchool, IconBook, IconCertificate } from '@tabler/icons-react';
+import { IconSchool, IconBook, IconCertificate, Icon } from '@tabler/icons-react';
+import { StaticImageData } from 'next/image';
 import TupImage from '@/../public/school/tup.png';
 import MmscImage from '@/../public/school/mmsc.png';
 import GmathsImage from '@/../public/school/gmaths.png';
@@ -8,11 +9,11 @@ export interface Education {
     level: string;
     school: string;
     year: string;
-    icon: any;
+    icon: Icon;
     description: string;
     extra: string;
     relevant?: string;
-    img: any;
+    img: StaticImageData;
     color: string;
 }
 

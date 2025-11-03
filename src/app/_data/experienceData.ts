@@ -1,8 +1,9 @@
+import { StaticImageData } from 'next/image';
 import TupImage from '@/../public/school/tup.png';
 
 interface Experience {
     id: number;
-    img: any;
+    img: StaticImageData;
     position: string;
     company: string;
     location: string;

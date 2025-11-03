@@ -1,6 +1,6 @@
 'use client';
 
-import { Title, Card, Text, Badge, Group, Modal, Image, Button, Tabs } from '@mantine/core';
+import { Title, Card, Text, Badge, Group, Modal, Button, Tabs } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { IconExternalLink, IconCalendar, IconCertificate, IconAward } from '@tabler/icons-react';
 import { useState, useRef, useEffect } from 'react';

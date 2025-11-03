@@ -3,7 +3,6 @@
 import { Text, Title } from "@mantine/core";
 import Bio from "../../_components/about/bio";
 import Education from "../../_components/about/education";
-import Image from "next/image";
 import Experience from "../../_components/about/experience";
 import Skills from "../../_components/about/skills";
 import Certificates from "../../_components/about/certificates";

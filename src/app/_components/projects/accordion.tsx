@@ -1,4 +1,4 @@
-import { Group, Text, Accordion, Button, Grid, Title, Badge, ActionIcon } from '@mantine/core';
+import { Group, Text, Accordion, Button, Grid, Badge, ActionIcon } from '@mantine/core';
 import Image, { StaticImageData } from 'next/image';
 import { Project_list } from '@/app/_data/projectData';
 import { IconBrandGithub } from '@tabler/icons-react';

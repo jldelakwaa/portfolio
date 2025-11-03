@@ -1,6 +1,5 @@
 import { Card, Text, Badge, Title, Group, Stack, Divider } from '@mantine/core';
 import { IconBriefcase, IconMapPin, IconCalendar } from '@tabler/icons-react';
-import TupImage from '@/../public/school/tup.png';
 import { useState } from 'react';
 import { experienceData } from '@/app/_data/experienceData';
 

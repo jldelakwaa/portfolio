@@ -1,7 +1,5 @@
 'use client';
 
-import Image from "next/image";
-import Navbar from "../../_components/header";
 import MyProjects from "@/app/_components/projects/accordion";
 import { Text, Title } from "@mantine/core";
 

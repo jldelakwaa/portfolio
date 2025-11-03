@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel';
-import { Card, Text, Badge, Timeline, Title } from '@mantine/core';
+import { Card, Text, Badge, Title } from '@mantine/core';
 import Image from 'next/image';
 import { educationData } from '@/app/_data/educationData';
 
