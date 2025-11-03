@@ -25,7 +25,7 @@ export default function Education() {
           }
         `}</style>
         <Carousel
-        slideSize="90%"
+        slideSize="95%"
         slideGap={8}
         withControls={false}
         withIndicators

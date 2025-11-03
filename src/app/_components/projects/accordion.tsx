@@ -1,4 +1,4 @@
-import { Group, Text, Accordion, Button, Grid } from '@mantine/core';
+import { Group, Text, Accordion, Button, Grid, Title, Badge } from '@mantine/core';
 import Image, { StaticImageData } from 'next/image';
 import { Project_list } from '@/app/_data/projectData';
 
@@ -6,9 +6,10 @@ interface AccordionLabelProps {
     label: string;
     image: string | StaticImageData;
     description: string;
+    type: 'activity' | 'project';
 }
 
-function AccordionLabel({ label, image, description }: AccordionLabelProps) {
+function AccordionLabel({ label, image, description, type }: AccordionLabelProps) {
     return (
         <Group wrap="nowrap">
             <div className="relative w-14 h-14 rounded-md overflow-hidden flex-shrink-0">
@@ -20,9 +21,9 @@ function AccordionLabel({ label, image, description }: AccordionLabelProps) {
                 />
             </div>
             <div>
-                <Text>{label}</Text>
+                <Text size="xl" c="blue">{label}</Text>
                 <Text size="sm" c="dimmed" fw={400}>
-                    {description}
+                    <span className="underline">{description} | {type === 'project' ? ' Project Based' : ' Activity Based'}</span>
                 </Text>
             </div>
         </Group>
@@ -32,16 +33,34 @@ function AccordionLabel({ label, image, description }: AccordionLabelProps) {
 export default function MyProjects() {
     const items = Project_list.map((item) => (
         <Accordion.Item value={item.id.toString()} key={item.label}>
-            <Accordion.Control aria-label={item.label}>
+            <Accordion.Control aria-label={item.label} bg="var(--mantine-color-blue-light)">
                 <AccordionLabel {...item} />
             </Accordion.Control>
             <Accordion.Panel>
                 <Grid gutter="lg">
-                    <Grid.Col span={{ base: 12, md: 6 }}>
+                    <Grid.Col span={{ base: 12, md: 8 }}>
                         <div className="flex flex-col h-full">
-                            <Text size="sm" className="mb-4 leading-relaxed text-justify" mx={12} mb={12} >
-                                {item.content}
-                            </Text>
+                            <div className="mb-4 mx-3">
+                                <Text fw={600} size="lg" mb="sm">Description:</Text>
+                                <Text size="sm" style={{ textAlign: 'justify', textIndent: '2rem', lineHeight: 1.6 }}>
+                                    {item.content}
+                                </Text>
+                            </div>
+                            <div className="mb-4 mx-3">
+                                <Text fw={600} mb="md">Skills:</Text>
+                                <Group gap="xs">
+                                    {item.skills.map((skill, index) => (
+                                        <Badge
+                                            key={index}
+                                            variant="dot"
+                                            size="md"
+                                            radius="md"
+                                        >
+                                            {skill}
+                                        </Badge>
+                                    ))}
+                                </Group>
+                            </div>
                             {item.link && (
                                 <Button
                                     variant="gradient"
@@ -49,20 +68,22 @@ export default function MyProjects() {
                                     href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="mt-auto w-fit"
+                                    px={40}
+                                    className="mt-auto lg:self-start hover:scale-105 transition-transform"
                                 >
-                                    View
+                                    View {item.type === 'project' ? 'Projects' : 'Activities'}
                                 </Button>
                             )}
                         </div>
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, md: 6 }}>
+                    <Grid.Col span={{ base: 12, md: 4 }}>
                         {item.preview && (
-                            <div className="relative w-full rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow">
+                            <div className="relative w-full h-84 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow">
                                 <Image
                                     src={item.preview}
                                     alt={item.label}
-                                    className="object-contain w-full h-auto max-h-96"
+                                    fill
+                                    className="object-cover"
                                 />
                             </div>
                         )}
@@ -79,6 +100,7 @@ export default function MyProjects() {
             radius="md"
             style={{ maxWidth: '1080px', width: '100%' }}
             mb={20}
+            className="object-contain"
         >
             {items}
         </Accordion>
