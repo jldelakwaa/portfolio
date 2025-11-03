@@ -41,44 +41,44 @@ function SkillCard({ skillType }: { skillType: string }) {
 
 export default function Skills() {
     return (
-        <div className="w-full max-w-5xl mx-auto px-4">
-            <Title order={1} mb="xl" className="text-center">👨‍💻 Skills & Technologies</Title>
-            <div className="my-8">
-                <Grid gutter="md">
+        <div className="w-full max-w-5xl mx-auto px-4 py-4 sm:py-0">
+            <Title order={1} mb="xl" className="text-center text-2xl sm:text-3xl md:text-4xl">👨‍💻 Skills & Technologies</Title>
+            <div className="my-4 sm:my-8">
+                <Grid gutter={{ base: 'sm', sm: 'md' }}>
                     {/* Row 1 - Frontend & Backend */}
-                    <Grid.Col span={{ base: 12, xs: 8 }}>
+                    <Grid.Col span={{ base: 12, sm: 8 }}>
                         <SkillCard skillType='Frontend' />
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                    <Grid.Col span={{ base: 12, sm: 4 }}>
                         <SkillCard skillType='Backend' />
                     </Grid.Col>
 
                     {/* Row 2 - Frameworks, Database, Dev Tools */}
-                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                    <Grid.Col span={{ base: 12, sm: 4 }}>
                         <SkillCard skillType='Frameworks' />
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                    <Grid.Col span={{ base: 12, sm: 4 }}>
                         <SkillCard skillType='Database' />
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                    <Grid.Col span={{ base: 12, sm: 4 }}>
                         <SkillCard skillType='Version Control' />
                     </Grid.Col>
 
-                    <Grid.Col span={{ base: 12, xs: 6 }}>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
                         <SkillCard skillType='Dev Tools' />
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, xs: 6 }}>
+                    <Grid.Col span={{ base: 12, sm: 6 }}>
                         <SkillCard skillType='Environment' />
                     </Grid.Col>
                     
-                    <Grid.Col span={{ base: 12, xs: 12 }}>
+                    <Grid.Col span={{ base: 12, sm: 12 }}>
                         <SkillCard skillType='Networks & System' />
                     </Grid.Col>
 
-                    <Grid.Col span={{ base: 12, xs: 4 }}>
+                    <Grid.Col span={{ base: 12, sm: 4 }}>
                         <SkillCard skillType='Languages' />
                     </Grid.Col>
-                    <Grid.Col span={{ base: 12, xs: 8 }}>
+                    <Grid.Col span={{ base: 12, sm: 8 }}>
                         <SkillCard skillType='Productivity' />
                     </Grid.Col>
                 </Grid>

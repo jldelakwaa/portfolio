@@ -17,15 +17,15 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
             padding="lg" 
             radius="md" 
             withBorder 
-            className="h-full min-h-[300px] max-w-[380px] mx-auto flex flex-col transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer"
+            className="h-full min-h-[280px] sm:min-h-[300px] max-w-[380px] mx-auto flex flex-col transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-pointer p-3 sm:p-4"
             onClick={onClick}
         >
             {/* Certificate Preview - Fixed Height */}
-            <Card.Section className="relative h-36 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
+            <Card.Section className="relative h-28 sm:h-36 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                    <IconCertificate size={64} className="text-blue-400 dark:text-blue-600" />
+                    <IconCertificate size={48} className="text-blue-400 dark:text-blue-600 sm:w-16 sm:h-16" />
                     {certificate.pdfUrl && (
-                        <Badge variant="filled" color="blue" size="sm">
+                        <Badge variant="filled" color="blue" size="sm" className="text-xs">
                             PDF Certificate
                         </Badge>
                     )}
@@ -33,19 +33,19 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
             </Card.Section>
 
             {/* Content area with flex-grow to fill remaining space */}
-            <div className="mt-4 flex-grow flex flex-col">
-                <Badge color="blue" variant="light" size="sm" mb="xs" className="w-fit">
+            <div className="mt-3 sm:mt-4 flex-grow flex flex-col">
+                <Badge color="blue" variant="light" size="sm" mb="xs" className="w-fit text-xs">
                     {certificate.category}
                 </Badge>
                 
                 {/* Title with fixed height and line clamping */}
-                <Text fw={600} size="lg" className="mb-2 line-clamp-2 min-h-[3.5rem]">
+                <Text fw={600} size="lg" className="mb-2 line-clamp-2 min-h-[3rem] sm:min-h-[3.5rem] text-sm sm:text-base">
                     {certificate.title}
                 </Text>
                 
                 <Group gap="xs" className="mb-2">
-                    <IconAward size={16} className="text-gray-500 flex-shrink-0" />
-                    <Text size="sm" c="dimmed" className="line-clamp-1">
+                    <IconAward size={14} className="text-gray-500 flex-shrink-0 sm:w-4 sm:h-4" />
+                    <Text size="sm" c="dimmed" className="line-clamp-1 text-xs sm:text-sm">
                         {certificate.issuer}
                     </Text>
                 </Group>
@@ -55,12 +55,12 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
                     {certificate.skills && certificate.skills.length > 0 && (
                         <Group gap="xs">
                             {certificate.skills.slice(0, 3).map((skill, index) => (
-                                <Badge key={index} size="xs" variant="dot">
+                                <Badge key={index} size="xs" variant="dot" className="text-xs">
                                     {skill}
                                 </Badge>
                             ))}
                             {certificate.skills.length > 3 && (
-                                <Badge size="xs" variant="outline">
+                                <Badge size="xs" variant="outline" className="text-xs">
                                     +{certificate.skills.length - 3}
                                 </Badge>
                             )}
@@ -104,19 +104,19 @@ export default function Certificates() {
     }, [activeTab]);
 
     return (
-        <div className="px-4 py-8 max-w-5xl mx-auto">
-            <Title order={1} mb="md" className="text-center">
+        <div className="px-4 py-4 sm:py-8 max-w-5xl mx-auto w-full">
+            <Title order={1} mb="md" className="text-center text-2xl sm:text-3xl md:text-4xl">
                 🏆 Certificates & Achievements
             </Title>
 
             {/* Category Tabs */}
-            <Tabs value={activeTab} onChange={(value) => setActiveTab(value || 'All')} className="mb-6">
-                <Tabs.List className="flex-wrap justify-center">
+            <Tabs value={activeTab} onChange={(value) => setActiveTab(value || 'All')} className="mb-4 sm:mb-6">
+                <Tabs.List className="flex-wrap justify-center gap-1">
                     {categories.map((category) => (
                         <Tabs.Tab
                             key={category}
                             value={category}
-                            className="data-[active=true]:!bg-blue-500 data-[active=true]:!text-white !bg-white dark:!bg-gray-800 hover:!bg-blue-300 dark:hover:!bg-gray-700 rounded-md px-4 py-2 transition-colors duration-200 !m-1"
+                            className="data-[active=true]:!bg-blue-500 data-[active=true]:!text-white !bg-white dark:!bg-gray-800 hover:!bg-blue-300 dark:hover:!bg-gray-700 rounded-md px-2 sm:px-4 py-1 sm:py-2 transition-colors duration-200 !m-1 text-xs sm:text-sm"
                         >
                             {category} ({getCategoryCount(category)})
                         </Tabs.Tab>
