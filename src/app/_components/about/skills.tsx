@@ -10,25 +10,25 @@ function SkillCard({ skillType }: { skillType: string }) {
     return (
         <Card 
             shadow="sm" 
-            padding="lg" 
+            padding="md" 
             radius="md" 
             withBorder 
             className="h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-default"
         >
             <Card.Section withBorder inheritPadding py="xs">
-                <div className="flex items-center justify-center gap-2">
-                    <Text size="xl">{skill.icon}</Text>
-                    <Title order={4} className="text-center">{skill.type}</Title>
+                <div className="flex items-center justify-center gap-1.5 sm:gap-2">
+                    <Text size="xl" className="text-lg sm:text-xl">{skill.icon}</Text>
+                    <Title order={4} className="text-center text-sm sm:text-base md:text-lg">{skill.type}</Title>
                 </div>
             </Card.Section>
-            <Card.Section inheritPadding py="sm">
-                <div className="flex flex-wrap gap-2 justify-center">
+            <Card.Section inheritPadding py="xs" className="py-2 sm:py-3">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
                     {skill.Skills.map((skillName, index) => (
                         <Badge 
                             key={index} 
                             variant="gradient" 
-                            size="md"
-                            className="transition-all duration-200 hover:scale-110"
+                            size="sm"
+                            className="transition-all duration-200 hover:scale-110 text-[10px] sm:text-xs"
                         >
                             {skillName}
                         </Badge>
@@ -41,10 +41,10 @@ function SkillCard({ skillType }: { skillType: string }) {
 
 export default function Skills() {
     return (
-        <div className="w-full max-w-5xl mx-auto px-4 py-4 sm:py-0">
-            <Title order={1} mb="xl" className="text-center text-2xl sm:text-3xl md:text-4xl">👨‍💻 Skills & Technologies</Title>
-            <div className="my-4 sm:my-8">
-                <Grid gutter={{ base: 'sm', sm: 'md' }}>
+        <div className="w-full max-w-5xl mx-auto px-2 py-2 sm:px-4 sm:py-4">
+            <Title order={1} mb="md" className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl">👨‍💻 Skills & Technologies</Title>
+            <div className="my-3 sm:my-4 md:my-8">
+                <Grid gutter={{ base: 'xs', sm: 'sm', md: 'md' }}>
                     {/* Row 1 - Frontend & Backend */}
                     <Grid.Col span={{ base: 12, sm: 8 }}>
                         <SkillCard skillType='Frontend' />
