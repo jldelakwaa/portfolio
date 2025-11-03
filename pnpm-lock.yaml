@@ -26,6 +26,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.1.0)
+      inspirational-quotes:
+        specifier: ^2.0.1
+        version: 2.0.1
       next:
         specifier: 15.5.5
         version: 15.5.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1208,6 +1211,9 @@ packages:
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
+
+  inspirational-quotes@2.0.1:
+    resolution: {integrity: sha512-IYJEdSUphF4HOoOiABua2l7aUZ2OBTc/NpihPuENF3ieXEBuywOTtYle7zzvZfEJKouG9utOwQpMQtm0GIB2BQ==}
 
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
@@ -3231,6 +3237,8 @@ snapshots:
       resolve-from: 4.0.0
 
   imurmurhash@0.1.4: {}
+
+  inspirational-quotes@2.0.1: {}
 
   internal-slot@1.1.0:
     dependencies:
