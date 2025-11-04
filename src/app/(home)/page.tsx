@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <div className="relative min-h-screen">
         {/* Background Pattern */}
-        <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
+        <GradientBackground fromColor="#ecfeff" toColor="#cffafe" />
         
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-screen lg:min-h-[70vh] px-6 md:px-8 lg:px-12 gap-6 lg:gap-8 py-8 lg:py-0">

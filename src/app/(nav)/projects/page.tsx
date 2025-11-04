@@ -7,7 +7,7 @@ import { Text, Title } from "@mantine/core";
 export default function Projects() {
   return (
     <div>
-      <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
+      <GradientBackground fromColor="#ecfeff" toColor="#cffafe" />
             
       <div className="relative flex flex-col justify-center items-center py-10 px-4">
         {/* Content */}

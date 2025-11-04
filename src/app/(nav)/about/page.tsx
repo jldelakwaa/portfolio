@@ -11,9 +11,9 @@ import GradientBackground from "@/app/_components/_common/gradient-background";
 export default function About() {
   return (
     <div className="relative">
-      <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
+      <GradientBackground fromColor="#ecfeff" toColor="#cffafe" />
       
-      <div className="relative flex flex-col items-center pt-8 pb-8 sm:pt-8 md:pt-8 sm:pb-6 md:pb-10 px-2 sm:px-4">
+      <div className="relative flex flex-col items-center pt-10 pb-8 sm:pt-8 md:pt-8 sm:pb-6 md:pb-10 px-2 sm:px-4">
         {/* Content */}
         <Title
           order={1}
