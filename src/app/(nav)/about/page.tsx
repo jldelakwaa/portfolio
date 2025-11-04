@@ -10,10 +10,10 @@ import GradientBackground from "@/app/_components/_common/gradient-background";
 
 export default function About() {
   return (
-    <>
+    <div className="relative">
+      <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
+      
       <div className="relative flex flex-col items-center pt-8 sm:pt-10 md:pt-12 pb-4 sm:pb-6 md:pb-10 px-2 sm:px-4">
-        <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
-
         {/* Content */}
         <Title
           order={1}
@@ -38,6 +38,6 @@ export default function About() {
           <Certificates />
         </div>
       </div>
-    </>
+    </div>
   );
 }

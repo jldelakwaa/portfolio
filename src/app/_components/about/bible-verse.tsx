@@ -62,7 +62,7 @@ export default function BibleVerse() {
       <div className="relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-gray-200/50">
         <div className="text-center">
           <blockquote className="text-lg md:text-xl font-medium text-gray-800 dark:text-gray-200 italic leading-relaxed mb-3">
-            "{verse.text}"
+            &ldquo;{verse.text}&rdquo;
           </blockquote>
           <cite className="block text-sm text-blue-600 dark:text-blue-400 font-semibold not-italic">
             — {verse.reference}
