@@ -44,7 +44,7 @@ export default function Quotes() {
     if (loading) {
         return (
             <div className="flex items-center justify-center p-8">
-                <div className="animate-pulse text-gray-400">Loading quote...</div>
+                <div className="animate-pulse text-gray-600">Loading quote...</div>
             </div>
         );
     }
@@ -52,7 +52,7 @@ export default function Quotes() {
     if (error || !quote) {
         return (
             <div className="flex items-center justify-center p-8">
-                <div className="text-gray-500 italic">Quote of the day unavailable</div>
+                <div className="text-gray-900 italic">Quote of the day unavailable</div>
             </div>
         );
     }
