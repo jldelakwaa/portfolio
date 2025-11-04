@@ -6,9 +6,9 @@ import { Text, Title } from "@mantine/core";
 
 export default function Projects() {
   return (
-    <div>
+    <div className="relative">
       <GradientBackground fromColor="#ecfeff" toColor="#cffafe" />
-            
+
       <div className="relative flex flex-col justify-center items-center py-10 px-4">
         {/* Content */}
         <Title
@@ -21,12 +21,10 @@ export default function Projects() {
             This is a collection of <span className="underline">projects</span> and <span className="underline">activities</span> that I have worked on!
           </Text>
         </div>
+        <div className="flex flex-col justify-center items-center w-full">
+          <MyProjects />
+        </div>
       </div>
-
-      <div className="flex flex-col justify-center items-center w-full">
-        <MyProjects />
-      </div>
-
     </div>
   );
 }
