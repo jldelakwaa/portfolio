@@ -5,8 +5,9 @@ export default function Hero() {
   return (
     <section
       aria-label="Hero Section"
+      className="text-center lg:text-left"
     >
-        <div className="flex items-center mb-6">
+        <div className="flex items-center mb-6 justify-center lg:justify-start">
           <span className="block w-12 h-0.5 bg-indigo-600 mr-3"></span>
           <h3 className="text-xl font-bold text-indigo-600">John Lester</h3>
         </div>
@@ -19,7 +20,7 @@ export default function Hero() {
           Software Developer | Network Operations Specialist.
         </h2>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center lg:justify-start">
           <PrimaryButton text="My Works" href="/projects" />
           <SecondaryButton text="Contact Me" href="/contact" />
         </div>
