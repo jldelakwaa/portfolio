@@ -5,7 +5,7 @@ import BioImage from '@/../public/bio.jpg';
 
 export default function Bio() {
     return (
-        <div className="px-2 py-2 sm:px-4 sm:py-4 md:py-8 w-full">
+        <div className="px-2 py-2 sm:px-4 sm:py-4 md:py-4 w-full">
             <Card
                 shadow="sm"
                 padding="0"
@@ -53,14 +53,9 @@ export default function Bio() {
                                 </Text>
                             </div>
 
-                            {/* <div className="flex items-start gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm">
-                                    📅 <span className="font-medium">Availability:</span> Open to opportunities!
-                                </Text>
-                            </div> */}
                         </div>
 
-                        <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 mb-3 sm:mb-4 md:mb-8">
+                        <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 sm:mb-4 md:mb-2">
                             <Text size="md" className="leading-relaxed text-gray-600 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base">
                                 I bridge the gap between development and operations, crafting seamless
                                 digital experiences with modern web technologies. Always excited to collaborate

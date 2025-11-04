@@ -13,7 +13,7 @@ export default function About() {
     <div className="relative">
       <GradientBackground fromColor="cyan-50" toColor="cyan-100" />
       
-      <div className="relative flex flex-col items-center pt-8 sm:pt-10 md:pt-12 pb-4 sm:pb-6 md:pb-10 px-2 sm:px-4">
+      <div className="relative flex flex-col items-center pt-8 pb-8 sm:pt-8 md:pt-8 sm:pb-6 md:pb-10 px-2 sm:px-4">
         {/* Content */}
         <Title
           order={1}
