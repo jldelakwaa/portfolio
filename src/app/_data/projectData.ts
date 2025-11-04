@@ -41,7 +41,7 @@ const Project_list: Project[] = [
     label: 'Cyber Security Lab',
     description: 'Cybersecurity Simulations and Exercises',
     content: "Through the Google Cybersecurity Professional Certificate program, I completed comprehensive hands-on activities covering essential security concepts and practices. The program included practical exercises in security frameworks, network security analysis, incident response, and security operations. I gained experience with industry-standard tools and methodologies for identifying vulnerabilities, analyzing security incidents, and implementing security controls. These activities provided foundational knowledge in security risk management, threat detection, and security compliance that are crucial for modern cybersecurity professionals.",
-    link: 'https://drive.google.com/drive/folders/1kkJ3kldvazzystbtWYJBqybnxQXsY9TI?usp=drive_link',
+    link: 'https://drive.google.com/drive/folders/1MBgpdESl2wzhcjoHbX3mwBPkr7F-9Xsh?usp=sharing',
     preview: '/projects/cyber-security/preview.png',
     type: 'activity',
     skills: [
