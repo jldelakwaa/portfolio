@@ -81,6 +81,29 @@ const Project_list: Project[] = [
     ],
     github: 'https://github.com/jldelakwaa/Capstone-AutoChecker',
   },
+  {
+    id: 99,
+    image: '/projects/portfolio/portfolio.png',
+    label: 'Personal Portfolio',
+    description: 'Current Portfolio Website using Next.js + Mantine UI + Tailwind CSS',
+    content: "This personal portfolio website showcases my skills, projects, and experiences as a software developer and network operations specialist. Built with Next.js for server-side rendering and optimized performance, the site features a clean and modern design using Mantine UI components combined with Tailwind CSS for custom styling. It includes sections for my bio, project highlights, and contact information, providing visitors with an engaging overview of my professional background. The portfolio is fully responsive, ensuring a seamless experience across devices, and is deployed on Vercel for fast and reliable access. This project demonstrates my proficiency in modern web development technologies and my ability to create visually appealing and functional web applications.",
+    link: 'https://portfolio-taupe-eight-38.vercel.app/',
+    preview: '/projects/portfolio/preview.png',
+    type: 'project',
+    skills: [
+      'Next.js',
+      'TypeScript',
+      'React',
+      'Tailwind CSS',
+      'Mantine UI',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'node.js',
+      'Vercel',
+    ],
+    github: 'https://github.com/jldelakwaa/portfolio',
+  },
 ];
 
 export { Project_list };

@@ -33,7 +33,7 @@ function AccordionLabel({ label, image, description, type }: AccordionLabelProps
 
 export default function MyProjects() {
     const items = Project_list.map((item) => (
-        <Accordion.Item value={item.id.toString()} key={item.label}>
+        <Accordion.Item value={item.id.toString()} key={item.label} className="shadow-md mx-4 ">
             <Accordion.Control aria-label={item.label} bg="#f8f9fa">
                 <AccordionLabel {...item} />
             </Accordion.Control>
