@@ -34,10 +34,18 @@ function AccordionLabel({ label, image, description, type }: AccordionLabelProps
 export default function MyProjects() {
     const items = Project_list.map((item) => (
         <Accordion.Item value={item.id.toString()} key={item.label} className="shadow-md mx-4 ">
-            <Accordion.Control aria-label={item.label} bg="#f8f9fa">
+            <Accordion.Control 
+                aria-label={item.label} 
+                bg="#f8f9fa"
+                style={{
+                    transition: 'background-color 0.2s',
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#eeeeee'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f8f9fa'}
+            >
                 <AccordionLabel {...item} />
             </Accordion.Control>
-            <Accordion.Panel >
+            <Accordion.Panel>
                 <Grid gutter="lg">
                     <Grid.Col span={{ base: 12, md: 8 }}>
                         <div className="flex flex-col h-full">
