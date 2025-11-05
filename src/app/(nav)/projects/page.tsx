@@ -16,7 +16,7 @@ export default function Projects() {
         >
           <span className="text-blue-500">My</span> Works
         </Title>
-        <div className="max-w-2xl text-center space-y-2">
+        <div className="max-w-2xl text-center space-y-2 mb-6">
           <Text className="text-gray-500 dark:text-gray-500 italic">
             This is a collection of <span className="underline">projects</span> and <span className="underline">activities</span> that I have worked on!
           </Text>

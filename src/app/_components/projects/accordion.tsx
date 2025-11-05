@@ -1,7 +1,7 @@
-import { Group, Text, Accordion, Button, Grid, Badge, ActionIcon } from '@mantine/core';
+import { Group, Text, Accordion, Button, Grid, Badge, ActionIcon, Tooltip } from '@mantine/core';
 import Image, { StaticImageData } from 'next/image';
 import { Project_list } from '@/app/_data/projectData';
-import { IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandGithub, IconPencil, IconBrandFigma } from '@tabler/icons-react';
 
 interface AccordionLabelProps {
     label: string;
@@ -85,9 +85,25 @@ export default function MyProjects() {
                                     </Button>
                                 )}
                                 {item.github && (
-                                    <ActionIcon size="lg" color="white" bg={'gray'} variant="transparent" component="a" href={item.github} target="_blank" rel="noopener noreferrer">
-                                        <IconBrandGithub size={20} stroke={1.5} />
-                                    </ActionIcon>
+                                    <Tooltip label="View GitHub Repo" color="gray" withArrow>
+                                        <ActionIcon size="lg" color="white" bg={'gray'} variant="transparent" component="a" href={item.github} target="_blank" rel="noopener noreferrer">
+                                            <IconBrandGithub size={20} stroke={1.5} />
+                                        </ActionIcon>
+                                    </Tooltip>
+                                )}
+                                {item.figjam && (
+                                    <Tooltip label="View Figjam" color="#9747ff" withArrow>
+                                        <ActionIcon size="lg" color="white" bg={'#9747ff'} variant="transparent" component="a" href={item.figjam} target="_blank" rel="noopener noreferrer">
+                                            <IconPencil size={20} stroke={1.5} />
+                                        </ActionIcon>
+                                    </Tooltip>
+                                )}
+                                {item.figma && (
+                                    <Tooltip label="View Figma Design" color="blue" withArrow>
+                                        <ActionIcon size="lg" color="white" bg={'blue'} variant="transparent" component="a" href={item.figma} target="_blank" rel="noopener noreferrer">
+                                            <IconBrandFigma size={20} stroke={1.5} />
+                                        </ActionIcon>
+                                    </Tooltip>
                                 )}
                             </div>
                         </div>

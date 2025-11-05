@@ -11,6 +11,8 @@ interface Project {
     type: 'activity' | 'project';
     skills: string[];
     github?: string;
+    figma?: string;
+    figjam?: string;
 }
 
 const Project_list: Project[] = [
@@ -103,6 +105,37 @@ const Project_list: Project[] = [
       'Vercel',
     ],
     github: 'https://github.com/jldelakwaa/portfolio',
+  },
+  {
+    id: 100,
+    image: '/projects/portfolio/portfolio.png',
+    label: 'Auto Checker Remake - Ongoing Project',
+    description: 'Current Portfolio Website using Laravel + React Starter',
+    content: "A project to remake my personal portfolio website using a Laravel backend combined with a React frontend. This new iteration aims to enhance the site's functionality, performance, and user experience by leveraging Laravel's robust backend capabilities for data management and API development, alongside React's dynamic and responsive UI components. The project focuses on creating a seamless integration between the frontend and backend, ensuring efficient data flow and improved interactivity. Additionally, the remake will incorporate modern design principles and best practices in web development to provide visitors with an engaging and informative experience. This project reflects my commitment to continuous learning and improvement in web development technologies.",
+    link: '',
+    preview: '/projects/ongoing/preview.png',
+    type: 'project',
+    skills: [
+      'Laravel',
+      'React',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'PHP',
+      'node.js',
+      'MySQL',
+      'Docker + WSL2',
+      'OCR',
+      'Google Cloud Vision API',
+      'Amazon Textract',
+      'Azure AI Vision',
+      'Tesseract.js',
+    ],
+    github: 'https://github.com/jldelakwaa/Auto-checker-remake',
+    figjam: 'https://www.figma.com/board/zZXA101KqJ91OluzMcal5k/Untitled?node-id=0-1&t=d3SajvPIy7GusBh2-1',
   },
 ];
 
