@@ -20,6 +20,7 @@ const SkillSets: Skill[] = [
                 'Tailwind CSS',
                 'Mantine UI',
                 'Material UI',
+                'shadcn/ui',
             ],
     },
     {
@@ -31,7 +32,6 @@ const SkillSets: Skill[] = [
                 'Node.js',
                 'PHP',
                 'Python',
-                'Flask',
             ],
     },
     {
@@ -52,6 +52,7 @@ const SkillSets: Skill[] = [
             [
                 'Laravel',
                 'Next.js',
+                'Flask',
             ],
     },
     {
@@ -84,8 +85,11 @@ const SkillSets: Skill[] = [
         Skills:
             [
                 'VS Code',
+                'Cursor',
                 'Postman',
+                'Asana',
                 'Figma',
+                'Figjam',
                 'MySQL Workbench',
             ],
     },
@@ -106,6 +110,7 @@ const SkillSets: Skill[] = [
                 'Fiber Optics',
                 'Ethernet',
                 'Wireless Network',
+                'IP Addressing',
                 'IP Subnetting',
                 'iMaster NCE',
             ],

@@ -31,8 +31,9 @@ const experienceData: Experience[] = [
             'Regular Employee',
             'Completed a project application',
             'Handled 4 Legacy and 5 Modern Systems',
-            'Successfully migrated one legacy system to modern framework',
-            'Handled security vulnerabilities and implemented best practices',
+            'Migrate legacy systems to the latest modern versions',
+            'Handled security vulnerabilities (Authentication, Authorization, and Accounting)',
+            'Handled database queries and optimization',
         ],
         technologies:
             [
