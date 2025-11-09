@@ -4,21 +4,21 @@ import SkillSets from '@/app/_data/skillsData';
 // SkillCard component with hover effects and icons
 function SkillCard({ skillType }: { skillType: string }) {
     const skill = SkillSets.find(s => s.type === skillType);
-    
+
     if (!skill) return null;
 
     return (
-        <Card 
-            shadow="sm" 
-            padding="md" 
-            radius="md" 
-            withBorder 
+        <Card
+            shadow="sm"
+            padding="md"
+            radius="md"
+            withBorder
             className="h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] cursor-default"
         >
             <Card.Section withBorder inheritPadding py="xs">
                 <div className="flex items-center justify-center gap-1.5 sm:gap-2">
                     <skill.icon size={24} className="text-lg sm:text-xl" stroke={1.5} />
-                    <Title order={4} className="text-center text-sm sm:text-base md:text-lg">{skill.type}</Title>
+                    <Title order={4} className="text-center text-md sm:text-base md:text-lg">{skill.type}</Title>
                 </div>
             </Card.Section>
             <Card.Section inheritPadding py="xs" className="py-2 sm:py-3">
@@ -26,14 +26,17 @@ function SkillCard({ skillType }: { skillType: string }) {
                     {skill.Skills.map((skillItem, index) => {
                         const IconComponent = skillItem.icon;
                         return (
-                            <Badge 
-                                key={index} 
-                                variant="gradient" 
-                                size="sm"
+                            <Badge
+                                key={index}
+                                variant="gradient"
+                                size="lg"
                                 className="transition-all duration-200 hover:scale-110 text-[10px] sm:text-xs flex items-center gap-1"
                             >
-                                <IconComponent size={12} stroke={1.5} />
-                                {skillItem.name}
+                                <div className="flex items-center gap-1">
+                                    <IconComponent size={16} stroke={1.5} />
+                                    {skillItem.name}
+                                </div>
+
                             </Badge>
                         );
                     })}
@@ -74,7 +77,7 @@ export default function Skills() {
                     <Grid.Col span={{ base: 12, sm: 6 }}>
                         <SkillCard skillType='Environment' />
                     </Grid.Col>
-                    
+
                     <Grid.Col span={{ base: 12, sm: 12 }}>
                         <SkillCard skillType='Networks & System' />
                     </Grid.Col>
