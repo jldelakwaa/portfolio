@@ -1,4 +1,4 @@
-import { Title, Grid, Card, Badge, Text } from '@mantine/core';
+import { Title, Grid, Card, Badge } from '@mantine/core';
 import SkillSets from '@/app/_data/skillsData';
 
 // SkillCard component with hover effects and icons
@@ -17,22 +17,26 @@ function SkillCard({ skillType }: { skillType: string }) {
         >
             <Card.Section withBorder inheritPadding py="xs">
                 <div className="flex items-center justify-center gap-1.5 sm:gap-2">
-                    <Text size="xl" className="text-lg sm:text-xl">{skill.icon}</Text>
+                    <skill.icon size={24} className="text-lg sm:text-xl" stroke={1.5} />
                     <Title order={4} className="text-center text-sm sm:text-base md:text-lg">{skill.type}</Title>
                 </div>
             </Card.Section>
             <Card.Section inheritPadding py="xs" className="py-2 sm:py-3">
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
-                    {skill.Skills.map((skillName, index) => (
-                        <Badge 
-                            key={index} 
-                            variant="gradient" 
-                            size="sm"
-                            className="transition-all duration-200 hover:scale-110 text-[10px] sm:text-xs"
-                        >
-                            {skillName}
-                        </Badge>
-                    ))}
+                    {skill.Skills.map((skillItem, index) => {
+                        const IconComponent = skillItem.icon;
+                        return (
+                            <Badge 
+                                key={index} 
+                                variant="gradient" 
+                                size="sm"
+                                className="transition-all duration-200 hover:scale-110 text-[10px] sm:text-xs flex items-center gap-1"
+                            >
+                                <IconComponent size={12} stroke={1.5} />
+                                {skillItem.name}
+                            </Badge>
+                        );
+                    })}
                 </div>
             </Card.Section>
         </Card>
