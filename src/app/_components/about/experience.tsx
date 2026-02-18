@@ -101,7 +101,7 @@ export default function Experience() {
                                 <Text size="sm" mb="xs" fw={600} className="text-xs sm:text-sm">Key Achievements:</Text>
                                 <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 ml-1 sm:ml-2">
                                     {selectedExp.achievements.map((achievement, i) => (
-                                        <li key={i} className="text-[10px] sm:text-xs md:text-sm text-gray-700 dark:text-gray-300 leading-tight sm:leading-normal">
+                                        <li key={i} className="text-[10px] sm:text-xs md:text-sm text-gray-700  leading-tight sm:leading-normal">
                                             {achievement}
                                         </li>
                                     ))}

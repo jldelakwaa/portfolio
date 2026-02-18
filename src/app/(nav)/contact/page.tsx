@@ -15,7 +15,7 @@ export default function Contact() {
           <Title>
             Contact <span className="text-blue-500">Me</span>
           </Title>
-          <Text className="text-gray-500 dark:text-gray-500 italic" mb={20}>
+          <Text className="text-gray-500  italic" mb={20}>
             Pleased to work with you!
           </Text>
           <Info />

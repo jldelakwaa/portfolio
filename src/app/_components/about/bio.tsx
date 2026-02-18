@@ -24,31 +24,31 @@ export default function Bio() {
 
                         <div className="mt-3 sm:mt-4 md:mt-6 space-y-1.5 sm:space-y-2 md:space-y-3">
                             <div className="flex items-start gap-1.5 sm:gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
+                                <Text size="sm" className="text-gray-700  text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
                                     📍 <span className="font-bold">Location:</span> Remote | Cavite, Philippines
                                 </Text>
                             </div>
                             
                             <div className="flex items-start gap-1.5 sm:gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
+                                <Text size="sm" className="text-gray-700  text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
                                     🎓 <span className="font-bold">Education:</span> Bachelor&apos;s Degree in Computer Engineering
                                 </Text>
                             </div>
 
                             <div className="flex items-start gap-1.5 sm:gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
+                                <Text size="sm" className="text-gray-700  text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
                                     🎯 <span className="font-bold">Focus:</span> Full-stack development & Networks
                                 </Text>
                             </div>
 
                             <div className="flex items-start gap-1.5 sm:gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
+                                <Text size="sm" className="text-gray-700  text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
                                     🚀 <span className="font-bold">Currently:</span> Jr. Developer (Laravel/React)
                                 </Text>
                             </div>
 
                             <div className="flex items-start gap-1.5 sm:gap-2">
-                                <Text size="sm" className="text-gray-700 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
+                                <Text size="sm" className="text-gray-700  text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
                                     🌐 <span className="font-bold">Language:</span> Filipino (Native), English (Advance), & Japanese (Learning)
                                 </Text>
                             </div>
@@ -56,7 +56,7 @@ export default function Bio() {
                         </div>
 
                         <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 sm:mb-4 md:mb-2">
-                            <Text size="md" className="leading-relaxed text-gray-600 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base">
+                            <Text size="md" className="leading-relaxed text-gray-600  text-[10px] sm:text-xs md:text-sm lg:text-base">
                                 I bridge the gap between development and operations, crafting seamless
                                 digital experiences with modern web technologies. Always excited to collaborate
                                 on innovative projects and connect with fellow developers.

@@ -27,7 +27,7 @@ export default function Form() {
       <div className='bg-white p-8 rounded-lg shadow-md'>
         <div className="grid grid-cols-1 gap-4">
           <div className="relative group">
-            <span className="absolute start-0 bottom-3 text-gray-500 dark:text-gray-400 group-focus-within:text-blue-600 transition-colors duration-300">
+            <span className="absolute start-0 bottom-3 text-gray-500  group-focus-within:text-blue-600 transition-colors duration-300">
               <IconAt className="w-4 h-4 rtl:rotate-[270deg]" />
             </span>
             <input 
@@ -38,11 +38,11 @@ export default function Form() {
               placeholder=" " 
               required 
             />
-            <label htmlFor="floating-email" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+            <label htmlFor="floating-email" className="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
           </div>
 
           <div className="relative group">
-            <span className="absolute start-0 bottom-3 text-gray-500 dark:text-gray-400 group-focus-within:text-blue-600 transition-colors duration-300">
+            <span className="absolute start-0 bottom-3 text-gray-500  group-focus-within:text-blue-600 transition-colors duration-300">
               <svg className="w-4 h-4 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 18">
                 <path clipRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path>
               </svg>
@@ -55,7 +55,7 @@ export default function Form() {
               placeholder=" " 
               required 
             />
-            <label htmlFor="floating-name" className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+            <label htmlFor="floating-name" className="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
           </div>
         </div>
 

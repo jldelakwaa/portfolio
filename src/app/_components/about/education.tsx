@@ -55,7 +55,7 @@ export default function Education() {
                 <Text size="md" className="mt-auto text-[10px] sm:text-xs md:text-sm lg:text-base text-center leading-tight sm:leading-normal">
                   {edu.description}
                   {edu.relevant && (
-                    <span className="block mt-1.5 sm:mt-2 text-[10px] sm:text-xs md:text-sm text-gray-600 dark:text-gray-400">{edu.relevant}</span>
+                    <span className="block mt-1.5 sm:mt-2 text-[10px] sm:text-xs md:text-sm text-gray-600 ">{edu.relevant}</span>
                   )}
                 </Text>
 

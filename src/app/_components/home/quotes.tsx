@@ -60,10 +60,10 @@ export default function Quotes() {
     return (
         <div className="max-w-4xl mx-auto px-6 py-4">
             <div className="text-center">
-                <blockquote className="text-xl md:text-2xl font-medium text-gray-800 dark:text-gray-200 italic">
+                <blockquote className="text-xl md:text-2xl font-medium text-gray-800  italic">
                     {quote.content}
                 </blockquote>
-                <cite className="block text-right text-gray-600 dark:text-gray-400 not-italic mt-2">
+                <cite className="block text-right text-gray-600  not-italic mt-2">
                     — {quote.author}
                 </cite>
             </div>

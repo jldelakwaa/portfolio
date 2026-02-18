@@ -25,7 +25,7 @@ export default function About() {
         </Title>
 
         <div className="max-w-5xl text-center space-y-1 mb-2 sm:mb-4">
-          <Text className="text-gray-500 dark:text-gray-500 italic text-xs sm:text-sm md:text-base">
+          <Text className="text-gray-500  italic text-xs sm:text-sm md:text-base">
             My name is <span className="underline">John Lester Dela Cruz</span>, Nice to meet you!
           </Text>
         </div>
