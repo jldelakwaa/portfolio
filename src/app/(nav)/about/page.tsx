@@ -11,7 +11,7 @@ import GradientBackground from "@/app/_components/_common/gradient-background";
 export default function About() {
   return (
     <div className="relative">
-      <GradientBackground fromColor="#ecfeff" toColor="#cffafe" />
+      <GradientBackground />
       
       <div className="relative flex flex-col items-center pt-10 pb-8 sm:pt-8 md:pt-8 sm:pb-6 md:pb-10 px-2 sm:px-4">
         {/* Content */}
@@ -25,7 +25,7 @@ export default function About() {
         </Title>
 
         <div className="max-w-5xl text-center space-y-1 mb-2 sm:mb-4">
-          <Text className="text-gray-500  italic text-xs sm:text-sm md:text-base">
+          <Text className="text-foreground/70 italic text-xs sm:text-sm md:text-base">
             My name is <span className="underline">John Lester Dela Cruz</span>, Nice to meet you!
           </Text>
         </div>

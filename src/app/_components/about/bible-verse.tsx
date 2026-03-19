@@ -44,7 +44,7 @@ export default function BibleVerse() {
   if (loading) {
     return (
       <div className="flex items-center justify-center p-6">
-        <div className="animate-pulse text-gray-400">Loading verse...</div>
+        <div className="animate-pulse text-foreground/60">Loading verse...</div>
       </div>
     );
   }
@@ -52,19 +52,19 @@ export default function BibleVerse() {
   if (error || !verse) {
     return (
       <div className="flex items-center justify-center p-6">
-        <div className="text-gray-500 italic">Verse of the day unavailable</div>
+        <div className="text-foreground/70 italic">Verse of the day unavailable</div>
       </div>
     );
   }
 
   return (
     <div className=" mx-auto px-6 py-6">
-      <div className="relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-gray-200/50">
+      <div className="relative bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-gray-200/50 dark:border-slate-700/60 transition-colors">
         <div className="text-center">
-          <blockquote className="text-lg md:text-xl font-medium text-gray-800  italic leading-relaxed mb-3">
+          <blockquote className="text-lg md:text-xl font-medium text-foreground italic leading-relaxed mb-3">
             &ldquo;{verse.text}&rdquo;
           </blockquote>
-          <cite className="block text-sm text-blue-600 dark:text-blue-400 font-semibold not-italic">
+          <cite className="block text-sm text-blue-600 dark:text-blue-300 font-semibold not-italic">
             — {verse.reference}
           </cite>
         </div>

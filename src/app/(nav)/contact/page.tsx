@@ -8,14 +8,14 @@ import { ActionIcon } from "@mantine/core";
 import { IconBrandFacebook, IconBrandGithub } from '@tabler/icons-react';
 export default function Contact() {
   return (
-    <div className="bg-cyan-100 py-8 px-8 min-h-[calc(100vh-8rem)] mt-30">
+    <div className="bg-cyan-100 dark:bg-slate-950 py-8 px-8 min-h-[calc(100vh-8rem)] mt-30 transition-colors">
       <HideFooter />
       <div className="flex flex-col lg:flex-row gap-8 max-w-4xl mx-auto items-center justify-center h-full">
         <div className="lg:w-1/2">
           <Title>
             Contact <span className="text-blue-500">Me</span>
           </Title>
-          <Text className="text-gray-500  italic" mb={20}>
+          <Text className="text-foreground/70 italic" mb={20}>
             Pleased to work with you!
           </Text>
           <Info />
@@ -35,7 +35,7 @@ export default function Contact() {
       </div>
 
       <div className="flex items-center justify-center mt-18">
-        <p className="text-gray-600">
+        <p className="text-foreground/70">
           &copy; {new Date().getFullYear()} <span className="text-indigo-600">John Lester</span> · Dev | Netwk
         </p>
       </div>

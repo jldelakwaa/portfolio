@@ -12,11 +12,11 @@ export default function Hero() {
           <h3 className="text-xl font-bold text-indigo-600">John Lester</h3>
         </div>
 
-        <h1 className="text-6xl font-extrabold text-gray-900 mb-4">
+        <h1 className="text-6xl font-extrabold text-foreground mb-4">
           Hi, I&apos;m Lester.
         </h1>
 
-        <h2 className="text-2xl text-gray-700 mb-6">
+        <h2 className="text-2xl text-foreground/80 mb-6">
           Software Developer | Network Operations Specialist.
         </h2>
 

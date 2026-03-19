@@ -66,7 +66,7 @@ export default function Experience() {
                                         {selectedExp.position}
                                     </Text>
                                     <Group gap="xs">
-                                        <IconBriefcase size={16} className="text-gray-600 flex-shrink-0 sm:w-[18px] sm:h-[18px]" />
+                                        <IconBriefcase size={16} className="text-foreground/70 flex-shrink-0 sm:w-[18px] sm:h-[18px]" />
                                         <Text size="lg" fw={500} c="blue" className="text-sm sm:text-base md:text-lg">
                                             {selectedExp.company}
                                         </Text>
@@ -81,7 +81,7 @@ export default function Experience() {
                             </Group>
 
                             <Group gap="xs" className="mt-1.5 sm:mt-2">
-                                <IconMapPin size={14} className="text-gray-500 flex-shrink-0 sm:w-4 sm:h-4" />
+                                <IconMapPin size={14} className="text-foreground/60 flex-shrink-0 sm:w-4 sm:h-4" />
                                 <Text size="sm" c="dimmed" className="text-[10px] sm:text-xs md:text-sm">
                                     {selectedExp.location}
                                 </Text>
@@ -101,7 +101,7 @@ export default function Experience() {
                                 <Text size="sm" mb="xs" fw={600} className="text-xs sm:text-sm">Key Achievements:</Text>
                                 <ul className="list-disc list-inside space-y-0.5 sm:space-y-1 ml-1 sm:ml-2">
                                     {selectedExp.achievements.map((achievement, i) => (
-                                        <li key={i} className="text-[10px] sm:text-xs md:text-sm text-gray-700  leading-tight sm:leading-normal">
+                                        <li key={i} className="text-[10px] sm:text-xs md:text-sm text-foreground/80 leading-tight sm:leading-normal">
                                             {achievement}
                                         </li>
                                     ))}

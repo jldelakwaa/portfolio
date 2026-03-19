@@ -12,7 +12,7 @@ export default function Info() {
                     <item.icon className="text-2xl mr-4 text-blue-500" />
                     <div>   
                         <p className="text-lg font-bold">{item.type}</p>
-                        <p className="text-gray-600">{item.description}</p>
+                        <p className="text-foreground/70">{item.description}</p>
                     </div>
                 </div>
             ))}

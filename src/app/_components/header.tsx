@@ -3,12 +3,19 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Container, Group, Burger, Paper, Transition } from "@mantine/core";
+import { Container, Group, Burger, Paper, Transition, useMantineColorScheme } from "@mantine/core";
+import { IconMoonStars, IconSunHigh } from "@tabler/icons-react";
 
 export default function Header() {
   const [opened, setOpened] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { colorScheme, setColorScheme } = useMantineColorScheme();
+  const isDark = colorScheme === "dark";
+
+  const toggleTheme = () => {
+    setColorScheme(isDark ? "light" : "dark");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +34,7 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 bg-cyan-50 transition-all duration-300`}
+      className="fixed top-0 left-0 w-full z-50 bg-cyan-50/95 dark:bg-slate-900/95 border-b border-cyan-100 dark:border-slate-800 backdrop-blur-sm transition-all duration-300"
     >
       <Container
         size="lg"
@@ -37,7 +44,7 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-bold text-gray-900 tracking-tight font-mono ml-4"
+          className="text-2xl font-bold text-foreground tracking-tight font-mono ml-4"
         >
           <span className="text-blue-600 font-extrabold">jl</span>_delacruz
         </Link>
@@ -51,7 +58,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`mr-3 relative font-semibold font-mono text-gray-800 hover:text-blue-500 transition-colors
+                  className={`mr-3 relative font-semibold font-mono text-foreground/90 hover:text-blue-500 transition-colors
                   ${isActive ? "text-blue-600 after:w-full" : "after:w-0"}
                   after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-blue-500 after:transition-all
                 `}
@@ -62,20 +69,33 @@ export default function Header() {
             })}
           </Group>
 
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="mr-3 rounded-xl sm:rounded-lg border border-cyan-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 px-3 py-2 text-foreground/90 hover:text-blue-500 transition-colors flex items-center gap-2"
+            aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+            title={isDark ? "Switch to light theme" : "Switch to dark theme"}
+          >
+            {isDark ? <IconSunHigh size={18} /> : <IconMoonStars size={18} />}
+            <span className="hidden md:block text-sm font-semibold font-mono">
+              {isDark ? "Light" : "Dark"}
+            </span>
+          </button>
+
           {/* Mobile Burger */}
-          <div className="mr-4">
+          <div className="mr-2 sm:mr-4">
             <Burger
-            opened={opened}
-            onClick={() => setOpened((o) => !o)}
-            size="sm"
-            hiddenFrom="sm"
-            aria-label="Toggle navigation"
-          />
+              opened={opened}
+              onClick={() => setOpened((o) => !o)}
+              size="sm"
+              hiddenFrom="sm"
+              aria-label="Toggle navigation"
+            />
           </div>
 
           <Link
             href="/contact"
-            className="hidden bg-lime-200 rounded-xl sm:flex items-center justify-center font-semibold font-mono text-gray-800 hover:text-blue-500 transition-colors"
+            className="hidden bg-lime-200 dark:bg-lime-500/20 dark:border dark:border-lime-500/40 rounded-xl sm:flex items-center justify-center font-semibold font-mono text-foreground/90 hover:text-blue-500 transition-colors"
             aria-label="Contact"
           >
             {/* Show icon only on small-medium screens */}
@@ -105,13 +125,13 @@ export default function Header() {
             shadow="md"
             radius="md"
             style={styles}
-            className="sm:hidden absolute top-full left-0 w-full bg-cyan-50"
+            className="sm:hidden absolute top-full left-0 w-full bg-cyan-50 dark:bg-slate-900 border-cyan-100 dark:border-slate-800"
           >
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-3 font-medium text-gray-800 hover:bg-blue-100 transition"
+                className="block px-4 py-3 font-medium text-foreground/90 hover:bg-blue-100 dark:hover:bg-slate-800 transition"
                 onClick={() => setOpened(false)}
               >
                 {item.name}
@@ -119,7 +139,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="block px-4 py-3 font-medium text-gray-800 hover:bg-blue-100 transition"
+              className="block px-4 py-3 font-medium text-foreground/90 hover:bg-blue-100 dark:hover:bg-slate-800 transition"
               onClick={() => setOpened(false)}
             >
               Contact

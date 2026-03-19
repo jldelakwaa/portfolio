@@ -23,7 +23,7 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
             {/* Certificate Preview - Fixed Height */}
             <Card.Section className="relative h-24 sm:h-28 md:h-32 lg:h-36 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex-shrink-0">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 sm:gap-2">
-                    <IconCertificate size={40} className="text-blue-400 dark:text-blue-600 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16" />
+                    <IconCertificate size={40} className="text-blue-400 dark:text-blue-300 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16" />
                     {certificate.pdfUrl && (
                         <Badge variant="filled" color="blue" size="xs" className="text-[9px] sm:text-[10px] md:text-xs">
                             PDF Certificate
@@ -44,7 +44,7 @@ function CertificateCard({ certificate, onClick }: { certificate: Certificate; o
                 </Text>
                 
                 <Group gap="xs" className="mb-1.5 sm:mb-2">
-                    <IconAward size={12} className="text-gray-500 flex-shrink-0 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
+                    <IconAward size={12} className="text-foreground/60 flex-shrink-0 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
                     <Text size="sm" c="dimmed" className="line-clamp-1 text-[10px] sm:text-xs md:text-sm">
                         {certificate.issuer}
                     </Text>

@@ -5,12 +5,12 @@ import Link from 'next/dist/client/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-cyan-100 py-10">
+        <footer className="bg-cyan-100 dark:bg-slate-900 border-t border-cyan-200 dark:border-slate-800 py-10 transition-colors">
             <Container
                 size="lg"
                 className="flex items-center justify-between py-3 font-bold font-mono"
             >
-                <p className="text-gray-600">
+                <p className="text-foreground/70">
                     &copy; {new Date().getFullYear()} <span className="text-indigo-600">John Lester</span> · Dev | Netwk
                 </p>
 

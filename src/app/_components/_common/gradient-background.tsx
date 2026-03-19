@@ -5,8 +5,8 @@ interface GradientBackgroundProps {
 }
 
 export default function GradientBackground({
-  fromColor = '#ecfeff',
-  toColor = '#cffafe',
+  fromColor = 'var(--gradient-from)',
+  toColor = 'var(--gradient-to)',
   direction = 'to bottom',
 }: GradientBackgroundProps) {
   return (

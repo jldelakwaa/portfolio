@@ -24,25 +24,25 @@ export default function Form() {
 
   return (
     <form className="w-full max-w-sm mx-auto" onSubmit={handleSubmit}>
-      <div className='bg-white p-8 rounded-lg shadow-md'>
+      <div className="bg-white dark:bg-slate-900 border border-cyan-100 dark:border-slate-700 p-8 rounded-lg shadow-md transition-colors">
         <div className="grid grid-cols-1 gap-4">
           <div className="relative group">
-            <span className="absolute start-0 bottom-3 text-gray-500  group-focus-within:text-blue-600 transition-colors duration-300">
+            <span className="absolute start-0 bottom-3 text-foreground/60 group-focus-within:text-blue-600 transition-colors duration-300">
               <IconAt className="w-4 h-4 rtl:rotate-[270deg]" />
             </span>
             <input 
               type="email" 
               name="email" 
               id="floating-email" 
-              className="py-2.5 ps-6 pe-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer autofill:bg-transparent autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]" 
+              className="py-2.5 ps-6 pe-0 w-full text-sm text-foreground bg-transparent border-0 border-b-2 border-cyan-300 dark:border-slate-600 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 dark:focus:border-blue-400 peer autofill:bg-transparent autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] dark:autofill:shadow-[inset_0_0_0px_1000px_rgb(15,23,42)]" 
               placeholder=" " 
               required 
             />
-            <label htmlFor="floating-email" className="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
+            <label htmlFor="floating-email" className="absolute text-sm text-foreground/70 duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 dark:peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
           </div>
 
           <div className="relative group">
-            <span className="absolute start-0 bottom-3 text-gray-500  group-focus-within:text-blue-600 transition-colors duration-300">
+            <span className="absolute start-0 bottom-3 text-foreground/60 group-focus-within:text-blue-600 transition-colors duration-300">
               <svg className="w-4 h-4 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 18">
                 <path clipRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path>
               </svg>
@@ -51,11 +51,11 @@ export default function Form() {
               type="text" 
               name="name" 
               id="floating-name" 
-              className="py-2.5 ps-6 pe-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer autofill:bg-transparent autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]" 
+              className="py-2.5 ps-6 pe-0 w-full text-sm text-foreground bg-transparent border-0 border-b-2 border-cyan-300 dark:border-slate-600 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 dark:focus:border-blue-400 peer autofill:bg-transparent autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] dark:autofill:shadow-[inset_0_0_0px_1000px_rgb(15,23,42)]" 
               placeholder=" " 
               required 
             />
-            <label htmlFor="floating-name" className="absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
+            <label htmlFor="floating-name" className="absolute text-sm text-foreground/70 duration-300 transform -translate-y-6 scale-75 top-3 start-0 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 dark:peer-focus:text-blue-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
           </div>
         </div>
 
@@ -64,11 +64,11 @@ export default function Form() {
             name="message"
             id="message"
             rows={5}
-            className="peer block w-full px-4 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 resize-none"
+            className="peer block w-full px-4 py-2 text-sm text-foreground bg-white dark:bg-slate-950 border border-cyan-300 dark:border-slate-600 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400 resize-none"
             placeholder="Your message"
             required
           />
-          <label htmlFor="message" className="absolute -top-7 left-0 text-sm font-medium text-gray-500 mb-2 flex items-center gap-2 peer-focus:text-blue-600 transition-colors duration-300">
+          <label htmlFor="message" className="absolute -top-7 left-0 text-sm font-medium text-foreground/70 mb-2 flex items-center gap-2 peer-focus:text-blue-600 dark:peer-focus:text-blue-400 transition-colors duration-300">
             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
               <path d="M18 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3.546l3.2 3.659a1 1 0 0 0 1.506 0L13.454 14H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-8 10H5a1 1 0 0 1 0-2h5a1 1 0 1 1 0 2Zm5-4H5a1 1 0 0 1 0-2h10a1 1 0 1 1 0 2Z" />
             </svg>

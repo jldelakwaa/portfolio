@@ -1,8 +1,20 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-mantine-color-scheme="dark"], [data-mantine-color-scheme="dark"] *));
 
 :root {
   --background: oklch(98.4% 0.019 200.873);
   --foreground: #171717;
+  --gradient-from: #ecfeff;
+  --gradient-to: #cffafe;
+  color-scheme: light;
+}
+
+[data-mantine-color-scheme="dark"] {
+  --background: #020617;
+  --foreground: #e5e7eb;
+  --gradient-from: #082f49;
+  --gradient-to: #0f172a;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -10,13 +22,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
