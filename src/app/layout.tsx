@@ -34,17 +34,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-mantine-color-scheme="light">
       <head>
         {/* Mantine's color scheme script ensures the right theme on first render */}
-        <ColorSchemeScript defaultColorScheme="light" />
+        <ColorSchemeScript defaultColorScheme="light" forceColorScheme="light" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <MantineProvider defaultColorScheme="light">
+        <MantineProvider defaultColorScheme="light" forceColorScheme="light">
           <Header />
-          <main className="mt-20">{children}</main>
+          <main className="pt-20 sm:pt-15">{children}</main>
           <Footer />
         </MantineProvider>
       </body>

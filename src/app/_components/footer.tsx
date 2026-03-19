@@ -5,7 +5,7 @@ import Link from 'next/dist/client/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-cyan-100 dark:bg-slate-900 border-t border-cyan-200 dark:border-slate-800 py-10 transition-colors">
+        <footer className="bg-cyan-100/90 py-10 transition-colors">
             <Container
                 size="lg"
                 className="flex items-center justify-between py-3 font-bold font-mono"

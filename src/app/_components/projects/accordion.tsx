@@ -12,8 +12,8 @@ interface AccordionLabelProps {
 
 function AccordionLabel({ label, image, description, type }: AccordionLabelProps) {
     return (
-        <Group wrap="nowrap">
-            <div className="relative w-14 h-14 rounded-md overflow-hidden flex-shrink-0">
+        <Group wrap="nowrap" className="items-start">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-md overflow-hidden flex-shrink-0">
                 <Image
                     src={image}
                     alt={label}
@@ -21,11 +21,14 @@ function AccordionLabel({ label, image, description, type }: AccordionLabelProps
                     className="object-cover"
                 />
             </div>
-            <div>
-                <Text size="xl" c="blue">{label}</Text>
-                <Text size="sm" c="dimmed" fw={400}>
-                    <span className="underline">{description} | {type === 'project' ? ' Project Based' : ' Activity Based'}</span>
+            <div className="space-y-1">
+                <Text size="xl" c="blue" className="text-2xl sm:text-[2rem] leading-tight">{label}</Text>
+                <Text size="sm" c="dimmed" fw={400} className="leading-snug">
+                    {description}
                 </Text>
+                <Badge variant="light" color={type === 'project' ? 'blue' : 'teal'} size="sm" className="capitalize">
+                    {type === 'project' ? 'Project Based' : 'Activity Based'}
+                </Badge>
             </div>
         </Group>
     );
@@ -33,25 +36,20 @@ function AccordionLabel({ label, image, description, type }: AccordionLabelProps
 
 export default function MyProjects() {
     const items = Project_list.map((item) => (
-        <Accordion.Item value={item.id.toString()} key={item.label} className="shadow-md mx-4 ">
+        <Accordion.Item value={item.id.toString()} key={item.id} className="shadow-md mx-2 sm:mx-4 rounded-lg overflow-hidden border border-cyan-200/80 bg-white/70">
             <Accordion.Control 
                 aria-label={item.label} 
-                bg="#f8f9fa"
-                style={{
-                    transition: 'background-color 0.2s',
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#eeeeee'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f8f9fa'}
+                className="!bg-white/70 hover:!bg-white/90 transition-colors"
             >
                 <AccordionLabel {...item} />
             </Accordion.Control>
-            <Accordion.Panel>
+            <Accordion.Panel className="!bg-white/85">
                 <Grid gutter="lg">
                     <Grid.Col span={{ base: 12, md: 8 }}>
                         <div className="flex flex-col h-full">
                             <div className="mb-4 mx-3">
                                 <Text fw={600} size="lg" mb="sm">Description:</Text>
-                                <Text size="sm" style={{ textAlign: 'justify', textIndent: '2rem', lineHeight: 1.6 }}>
+                                <Text size="sm" className="text-foreground/80 leading-relaxed" style={{ textAlign: 'justify' }}>
                                     {item.content}
                                 </Text>
                             </div>
@@ -110,7 +108,7 @@ export default function MyProjects() {
                     </Grid.Col>
                     <Grid.Col span={{ base: 12, md: 4 }}>
                         {item.preview && (
-                            <div className="relative w-full h-84 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow">
+                            <div className="relative w-full h-72 sm:h-84 rounded-lg overflow-hidden border border-cyan-200 shadow-md hover:shadow-lg transition-shadow">
                                 <Image
                                     src={item.preview}
                                     alt={item.label}
