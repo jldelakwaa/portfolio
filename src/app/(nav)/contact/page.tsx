@@ -59,7 +59,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <footer className="w-full mt-10 pt-5 border-t border-cyan-200/70 text-center">
+        <footer className="w-full mt-10 pt-5 text-center">
           <p className="text-sm text-foreground/65 italic">
             Thanks for stopping by.
           </p>

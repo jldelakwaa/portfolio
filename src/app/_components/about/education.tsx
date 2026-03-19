@@ -3,28 +3,36 @@ import { Card, Text, Badge, Title } from '@mantine/core';
 import Image from 'next/image';
 import { educationData } from '@/app/_data/educationData';
 
+const colorClassMap: Record<string, string> = {
+  blue: 'text-blue-500',
+  cyan: 'text-cyan-500',
+  teal: 'text-teal-500',
+  violet: 'text-violet-500',
+};
+
 export default function Education() {
   return (
     <div className="px-2 py-2 sm:px-4 sm:py-4 md:py-8 max-w-5xl mx-auto text-center mb-2 sm:mb-4 w-full">
-      <Title order={1} mb="md" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🎓Education</Title>
+      <Title order={1} mb="md" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🎓 Education</Title>
       <div>
         <style jsx global>{`
-          .mantine-Carousel-indicator {
+          .education-carousel .mantine-Carousel-indicator {
             width: 12px;
             height: 6px;
             transition: width 250ms ease;
             background-color: #94a3b8;
           }
 
-          .mantine-Carousel-indicator[data-active] {
+          .education-carousel .mantine-Carousel-indicator[data-active] {
             width: 40px;
           }
 
-          .mantine-Carousel-indicators {
+          .education-carousel .mantine-Carousel-indicators {
             bottom: -24px;
           }
         `}</style>
         <Carousel
+        className="education-carousel"
         slideSize={{ base: '100%', sm: '95%' }}
         slideGap={{ base: 8, sm: 12 }}
         withControls={false}
@@ -35,7 +43,10 @@ export default function Education() {
             <Card shadow="sm" padding="md" radius="md" withBorder className="h-full">
               <div className="flex flex-col h-full items-center px-1.5 sm:px-2 md:px-4">
                 <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-2 sm:mb-3 md:mb-4">
-                  <edu.icon size={24} className={`text-${edu.color}-500 sm:w-7 sm:h-7 md:w-8 md:h-8`} />
+                  <edu.icon
+                    size={24}
+                    className={`${colorClassMap[edu.color] ?? 'text-blue-500'} sm:w-7 sm:h-7 md:w-8 md:h-8`}
+                  />
                   <Badge color={edu.color} size="md" className="text-[10px] sm:text-xs md:text-sm">
                     {edu.level}
                   </Badge>

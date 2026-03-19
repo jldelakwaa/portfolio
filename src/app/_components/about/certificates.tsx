@@ -126,23 +126,24 @@ export default function Certificates() {
 
             {/* Carousel View */}
             <style jsx global>{`
-                .mantine-Carousel-indicator {
+                .certificates-carousel .mantine-Carousel-indicator {
                     width: 12px;
                     height: 4px;
                     transition: width 250ms ease;
                     background-color: #94a3b8;
                 }
 
-                .mantine-Carousel-indicator[data-active] {
+                .certificates-carousel .mantine-Carousel-indicator[data-active] {
                     width: 40px;
                     background-color: #3b82f6;
                 }
 
-                .mantine-Carousel-root {
+                .certificates-carousel .mantine-Carousel-root {
                     max-width: 100%;
                 }
             `}</style>
             <Carousel
+                className="certificates-carousel pb-6 sm:pb-8"
                 slideSize={{
                     base: 'calc(100% - 16px)',
                     xs: filteredCertificates.length === 1 ? '400px' : 'calc(50% - 12px)',
@@ -154,7 +155,6 @@ export default function Certificates() {
                 plugins={activeTab === 'All' ? [autoplay.current] : []}
                 onMouseEnter={activeTab === 'All' ? autoplay.current.stop : undefined}
                 onMouseLeave={activeTab === 'All' ? autoplay.current.reset : undefined}
-                className="pb-6 sm:pb-8"
             >
                 {filteredCertificates.map((cert) => (
                     <Carousel.Slide key={cert.id}>

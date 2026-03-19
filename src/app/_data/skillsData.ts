@@ -42,8 +42,6 @@ import {
     IconDatabaseExport,
     IconLanguageHiragana,
     IconCursorText,
-    IconBrandAsana,
-    IconApiApp,
     IconPalette,
     IconServerBolt
 } from '@tabler/icons-react';
@@ -134,8 +132,9 @@ const SkillSets: Skill[] = [
         Skills: [
             { name: 'VS Code', icon: IconBrandVscode },
             { name: 'Cursor', icon: IconCursorText },
-            { name: 'Postman', icon: IconApiApp },
-            { name: 'Asana', icon: IconBrandAsana },
+            { name: 'OpenAI Codex', icon: IconCodeCircle },
+            { name: 'Claude', icon: IconCodeCircle },
+            { name: 'GitHub Copilot', icon: IconBrandGithub },
             { name: 'Figma', icon: IconBrandFigma },
             { name: 'Figjam', icon: IconBrandFigma },
             { name: 'MySQL Workbench', icon: IconDatabaseExport },

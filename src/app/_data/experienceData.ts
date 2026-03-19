@@ -18,7 +18,49 @@ interface Experience {
 
 const experienceData: Experience[] = [
     {
-        id: 1,
+        id: 3,
+        img: TupImage,
+        position: 'Kintone Developer',
+        company: 'Coliconstruct Engineering Services',
+        location: "20 NHA Comm'l & Ind'l Compound, Brgy. Gavino Maderan, Luzon Avenue, General Mariano Alvarez, 4117 Cavite",
+        period: '2026 - Present',
+        startDate: '2026',
+        type: 'Part-time | Remote',
+        description: 'Build and maintain kintone plugins, applications, and user interfaces. Provide remote IT support and leverage AI tools to accelerate development and automation.',
+        achievements: [
+            'Created Project Management System using kintone for internal use',
+            'Created PH Standard HR Management System Application Integrated with LiLo API, It include Employee Information, Attendance, Calendar Visuals, and Payroll with Kintone as the backend database',
+            'Delivered multiple custom kintone plugins and applications to enhance business processes',
+            'Improved user experience by enhancing kintone UI components',
+            'Provided remote IT support, resolving technical issues and ensuring smooth operations',
+            'Leveraged AI tools to accelerate development and automate routine tasks, increasing efficiency',
+        ],
+        technologies:
+            [
+                'Kintone',
+                'JavaScript',
+                'HTML',
+                'CSS',
+                'AI (Codex, Claude, Gemini)',
+                'Git',
+                'Visual Studio Code',
+                'Google Workspace',
+                'Lilo Attendance App'
+            ],
+        Skills:
+            [
+                'Kintone Development',
+                'Plugin Development',
+                'UI Design',
+                'Automation',
+                'AI-assisted Coding',
+                'Remote Collaboration',
+                'Problem Solving',
+                'API Integration',
+            ],
+    },
+    {
+        id: 2,
         img: TupImage,
         position: 'Jr. Software Engineer',
         company: 'Coredev Inc.',
@@ -65,7 +107,7 @@ const experienceData: Experience[] = [
             ],
     },
     {
-        id: 2,
+        id: 1,
         img: TupImage,
         position: 'IT Staff | Network Operations Specialist',
         company: 'Infinity Inc. Fiber Blaze',
@@ -110,8 +152,5 @@ const experienceData: Experience[] = [
                 'IP Subnetting',
             ],
     },
-    
-
 ];
-
 export { experienceData };

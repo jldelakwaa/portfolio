@@ -49,7 +49,7 @@ export default function Bio() {
 
                             <div className="flex items-start gap-1.5 sm:gap-2">
                                 <Text size="sm" className="text-foreground/80 text-[10px] sm:text-xs md:text-sm leading-tight sm:leading-normal">
-                                    🌐 <span className="font-bold">Language:</span> Filipino (Native), English (Advance), & Japanese (Learning)
+                                    🌐 <span className="font-bold">Language:</span> Filipino (Native), English (Advanced), & Japanese (Learning)
                                 </Text>
                             </div>
 
