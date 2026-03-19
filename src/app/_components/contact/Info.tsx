@@ -2,21 +2,34 @@ import { IconAt, IconMapPin } from '@tabler/icons-react';
 
 export default function Info() {
     const data = [
-        { type: "Email", description: "jldelakwaa@gmail.com", icon: IconAt },
-        { type: "Location", description: "Cavite, Philippines", icon: IconMapPin },
+        {
+            type: "Email",
+            description: "jldelakwaa@gmail.com",
+            note: "For project inquiries and collaboration",
+            icon: IconAt,
+        },
+        {
+            type: "Location",
+            description: "Cavite, Philippines",
+            note: "Remote-friendly for global teams",
+            icon: IconMapPin,
+        },
     ];
+
     return (
-        <div>
+        <div className="space-y-5">
             {data.map((item, index) => (
-                <div key={index} className="flex items-center mb-4">
-                    <item.icon className="text-2xl mr-4 text-blue-500" />
-                    <div>   
-                        <p className="text-lg font-bold">{item.type}</p>
-                        <p className="text-foreground/70">{item.description}</p>
+                <div key={index} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg border border-cyan-200/80 bg-white/70 text-blue-600">
+                        <item.icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                        <p className="text-[11px] uppercase tracking-wide text-foreground/55">{item.type}</p>
+                        <p className="text-base sm:text-lg font-semibold leading-tight text-foreground/90">{item.description}</p>
+                        <p className="text-sm text-foreground/65 mt-1">{item.note}</p>
                     </div>
                 </div>
             ))}
         </div>
     );
-
 }

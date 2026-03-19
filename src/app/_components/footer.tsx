@@ -1,9 +1,18 @@
+'use client';
+
 import { ActionIcon, Container, Group } from '@mantine/core';
 import { IconBrandFacebook, IconBrandGithub, IconMail } from '@tabler/icons-react';
 import Link from 'next/dist/client/link';
+import { usePathname } from 'next/navigation';
 
 
 export default function Footer() {
+    const pathname = usePathname();
+
+    if (pathname === '/contact') {
+        return null;
+    }
+
     return (
         <footer className="bg-cyan-100/90 py-10 transition-colors">
             <Container

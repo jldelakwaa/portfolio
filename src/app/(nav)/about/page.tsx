@@ -10,34 +10,27 @@ import GradientBackground from "@/app/_components/_common/gradient-background";
 
 export default function About() {
   return (
-    <div className="relative">
+    <div className="relative min-h-[calc(100vh-12rem)]">
       <GradientBackground />
       
-      <div className="relative flex flex-col items-center pt-10 pb-8 sm:pt-8 md:pt-8 sm:pb-6 md:pb-10 px-2 sm:px-4">
-        {/* Content */}
-        <Title
-          order={1}
-          mb="xs"
-          mt="xs"
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-        >
-          About <span className="text-blue-500">Me</span>
-        </Title>
-
-        <div className="max-w-5xl text-center space-y-1 mb-2 sm:mb-4">
-          <Text className="text-foreground/70 italic text-xs sm:text-sm md:text-base">
+      <section className="relative max-w-6xl mx-auto flex flex-col items-center px-4 pt-4 pb-10 sm:pb-12">
+        <div className="max-w-2xl text-center space-y-2 mb-5 sm:mb-6">
+          <Title order={1} className="text-4xl sm:text-5xl md:text-6xl">
+            About <span className="text-blue-500">Me</span>
+          </Title>
+          <Text className="text-foreground/70 italic text-sm sm:text-base leading-relaxed">
             My name is <span className="underline">John Lester Dela Cruz</span>, Nice to meet you!
           </Text>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-2 sm:gap-4 md:gap-6 w-full">
+        <div className="w-full flex flex-col items-center gap-2 sm:gap-4 md:gap-6">
           <Bio />
           <Skills />
           <Experience />
           <Education />
           <Certificates />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
